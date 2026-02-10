@@ -410,6 +410,11 @@
     "HPC Exchange",
     "Managing Workloads and Jobs"
   ],
+  "/workshops/kubernetes-tutorial/": [
+    "Home",
+    "RCAC Workshops",
+    "Anvil Kubernetes"
+  ],
   "/tags/": [
     "Home",
     "Tags"
