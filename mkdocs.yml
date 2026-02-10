@@ -170,6 +170,7 @@ nav:
         - Job History: workshops/hpc_exchange/week4/history.md
         - Resource Utilization and Monitoring: workshops/hpc_exchange/week4/monitor.md
         - Managing Workloads and Jobs: workshops/hpc_exchange/week4/workloads.md
+    - Anvil Kubernetes: workshops/kubernetes-tutorial.md
   - Tags: tags.md
   - Contact us: contact.md
 

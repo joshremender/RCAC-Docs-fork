@@ -8,3 +8,4 @@ Check the upcoming RCAC trainings on [RCAC training page :octicons-link-external
 We will also regularly upload RCAC workshop and tutorial materials to this website. 
 
 - [**HPC Exchange**](hpc_exchange/index.md)
+- [**Anvil Kubernetes**](kubernetes-tutorial.md)
