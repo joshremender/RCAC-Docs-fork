@@ -23,6 +23,8 @@ draft: true
     **[NAIRR Ticket Portal](https://nairrpilot.org/open-support-request)**
     For NAIRR users to submit support tickets.
 
+    **[Anvil Publication](https://dl.acm.org/doi/10.1145/3491418.3530766)** Original Anvil publication from 2022 by Song et. al.
+
 <hr style="border: 3px solid">
 
 <span style="font-size: 1.75em; font-weight: bold;">Frequently Asked Questions</span>

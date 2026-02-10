@@ -33,7 +33,7 @@ By default, you will have access to three different storage locations:
 - **$PROJECT:** 5TB of space (can request more)
 - **$SCRATCH:** 100TB of storage with a 1 million file limit.
 
-See [File Management](storage.md) for more information.
+See [File Management](file_management.md) for more information.
 
 ## Submitting your first job
 
