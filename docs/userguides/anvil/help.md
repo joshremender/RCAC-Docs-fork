@@ -1,6 +1,7 @@
 ---
 tags:
   - Anvil
+  - Help
 authors:
   - dane
 draft: true
@@ -68,10 +69,6 @@ You can search all modules using `$ module spider`. Some modules require you to 
 
 * Error -- failed to map user (\<username\>@access-ci.org)
 
-<hr style="border: 3px solid">
-
-## **Common Questions**
-
 ### How to cite Anvil
 
 To acknowledge the use of Anvil for papers, presentations, or other publications, please use the following citation:
@@ -80,7 +77,7 @@ To acknowledge the use of Anvil for papers, presentations, or other publications
 
 <hr style="border: 3px solid">
 
-## **AI / GPU FAQs**
+## **AI- / GPU-Specific FAQs**
 
 ### Placeholder 1
 
