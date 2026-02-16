@@ -49,6 +49,7 @@ extra_javascript:
   - assets/js/tablefilter.js
   - assets/js/init-tablefilter.js
   - assets/js/breadcrumbs.js
+  - assets/js/external-links.js
 
 plugins:
   - search
@@ -110,6 +111,15 @@ nav:
       - Compiling Source Code: userguides/gautschi/compile.md
       - Frequently Asked Questions: userguides/gautschi/faq.md
       - Datasets: userguides/gautschi/datasets.md
+    - Bell User Guide: https://www.rcac.purdue.edu/knowledge/bell
+    - Negishi User Guide: https://www.rcac.purdue.edu/knowledge/negishi
+    - Gilbreth User Guide: https://www.rcac.purdue.edu/knowledge/gilbreth
+    - Scholar User Guide: https://www.rcac.purdue.edu/knowledge/scholar
+  - Storage User Guides:
+    - Data Depot User Guide: https://www.rcac.purdue.edu/knowledge/depot
+    - Fortress User Guide: https://www.rcac.purdue.edu/knowledge/fortress
+    - Scratch User Guide: https://www.rcac.purdue.edu/knowledge/scratch
+    - Box Research Lab Folder User Guide: https://www.rcac.purdue.edu/knowledge/boxfolder
   - RCAC Blogs:
     - blog/index.md
   - Software:
