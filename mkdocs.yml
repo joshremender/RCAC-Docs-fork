@@ -16,11 +16,9 @@ theme:
     - navigation.top
     - navigation.footer
     - navigation.sections
-    #- navigation.expand
     - toc.follow
     - search.suggest
     - search.highlight
-    #- search.share
     - content.code.copy
   palette:
     - media: "(prefers-color-scheme)"
