@@ -10,6 +10,9 @@ draft: true
 
 !!! info "Anvil Resources"
 
+    **[ACCESS How To](https://allocations.access-ci.org/how-to)**
+    List of how-to questions regarding your ACCESS account.
+
     **[ACCESS Support Hub](https://support.access-ci.org/)**
     ACCESS-specific support if you do not see your question/issue here.
 
