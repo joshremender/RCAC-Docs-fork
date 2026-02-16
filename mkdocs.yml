@@ -15,7 +15,7 @@ theme:
     # Back-to-top button
     - navigation.top
     - navigation.footer
-    #- navigation.sections
+    - navigation.sections
     #- navigation.expand
     - toc.follow
     - search.suggest
@@ -78,9 +78,8 @@ plugins:
   - macros
 
 nav:
-  - Home: index.md
   - HPC User Guides:
-    - Anvil User Guide:
+    - Anvil:
       - userguides/anvil/index.md
       - About:
         - Overview: userguides/anvil/overview.md
@@ -99,7 +98,7 @@ nav:
       - Anvil Notebook: userguides/anvil/notebook.md
       - Maintenance Log: userguides/anvil/maintenance.md
       - Policies: userguides/anvil/policies.md
-    - Gautschi User Guide:
+    - Gautschi:
       - userguides/gautschi/index.md
       - Gautschi Overview: userguides/gautschi/overview.md
       - Biography of Gautschi: userguides/gautschi/biography.md
@@ -111,42 +110,43 @@ nav:
       - Compiling Source Code: userguides/gautschi/compile.md
       - Frequently Asked Questions: userguides/gautschi/faq.md
       - Datasets: userguides/gautschi/datasets.md
-    - Bell User Guide: https://www.rcac.purdue.edu/knowledge/bell
-    - Negishi User Guide: https://www.rcac.purdue.edu/knowledge/negishi
-    - Gilbreth User Guide: https://www.rcac.purdue.edu/knowledge/gilbreth
-    - Scholar User Guide: https://www.rcac.purdue.edu/knowledge/scholar
+    - Bell: https://www.rcac.purdue.edu/knowledge/bell
+    - Negishi: https://www.rcac.purdue.edu/knowledge/negishi
+    - Gilbreth: https://www.rcac.purdue.edu/knowledge/gilbreth
+    - Scholar: https://www.rcac.purdue.edu/knowledge/scholar
   - Storage User Guides:
-    - Data Depot User Guide: https://www.rcac.purdue.edu/knowledge/depot
-    - Fortress User Guide: https://www.rcac.purdue.edu/knowledge/fortress
-    - Scratch User Guide: https://www.rcac.purdue.edu/knowledge/scratch
-    - Box Research Lab Folder User Guide: https://www.rcac.purdue.edu/knowledge/boxfolder
+    - Data Depot: https://www.rcac.purdue.edu/knowledge/depot
+    - Fortress: https://www.rcac.purdue.edu/knowledge/fortress
+    - Scratch: https://www.rcac.purdue.edu/knowledge/scratch
+    - Box Research Lab Folder: https://www.rcac.purdue.edu/knowledge/boxfolder
   - RCAC Blogs:
-    - blog/index.md
-  - Software:
-    - software/index.md
-    - All Software: software/app_catalog.md
-    - Compilers: software/compilers_catalog.md
-    - MPIs: software/mpi_catalog.md
-    - Computational Chemistry: software/chemistry_catalog.md
-    - Fluid Dynamics: software/fluid_dynamics_catalog.md
-    - Audio/Visualization: software/audio_visual_catalog.md
-    - Library: software/library_catalog.md
-    - Mathematics/Statistics: software/math_stat_catalog.md
-    - Engineering: software/engineering_catalog.md
-    - Geoscience: software/geoscience_catalog.md
-    - Utilities: software/utilities_catalog.md
-    - Workflow: software/workflow_catalog.md
-  - Datasets:
-    - datasets/index.md
-    - AI: datasets/ai.md
-    - Hydrological: datasets/hydrological.md
-    - Meteorological: datasets/meteorological.md
-    - Geospatial: datasets/geospatial.md
-    - Covariates: datasets/Covariates.md
-    - GeoAI: datasets/geoai.md
-    - Igenomes: datasets/igenomes.md
+    - All Blogs:
+      - blog/index.md
+  - Software and Datasets:
+    - Software:
+      - software/index.md
+      - All Software: software/app_catalog.md
+      - Compilers: software/compilers_catalog.md
+      - MPIs: software/mpi_catalog.md
+      - Computational Chemistry: software/chemistry_catalog.md
+      - Fluid Dynamics: software/fluid_dynamics_catalog.md
+      - Audio/Visualization: software/audio_visual_catalog.md
+      - Library: software/library_catalog.md
+      - Mathematics/Statistics: software/math_stat_catalog.md
+      - Engineering: software/engineering_catalog.md
+      - Geoscience: software/geoscience_catalog.md
+      - Utilities: software/utilities_catalog.md
+      - Workflow: software/workflow_catalog.md
+    - Datasets:
+      - datasets/index.md
+      - AI: datasets/ai.md
+      - Hydrological: datasets/hydrological.md
+      - Meteorological: datasets/meteorological.md
+      - Geospatial: datasets/geospatial.md
+      - Covariates: datasets/Covariates.md
+      - GeoAI: datasets/geoai.md
+      - Igenomes: datasets/igenomes.md
   - RCAC Workshops:
-    - workshops/index.md
     - HPC Exchange:
       - workshops/hpc_exchange/index.md
       - Week 1:
