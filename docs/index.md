@@ -52,7 +52,7 @@ Follow these steps to get up and running on our clusters.
 
 <div class="grid cards" markdown>
 
--   :material-hammer-wrench:{ .lg .middle } __Anvil__
+-   :material-server:{ .lg .middle } __Anvil__
 
     ---
 
@@ -71,6 +71,42 @@ Follow these steps to get up and running on our clusters.
     **192 cores/node | 384 GB RAM | H100 80GB GPUs**
 
     [:octicons-arrow-right-24: Gautschi User Guide](userguides/gautschi/index.md)
+
+-   :material-server:{ .lg .middle } __Bell__
+
+    ---
+
+    Community Cluster optimized for communities running traditional, tightly-coupled science and engineering applications. Built through a partnership with Dell and AMD, Bell consists of compute nodes with two 64-core AMD EPYC "Rome" processors and 256 GB of memory.
+
+    **128 cores/node | 256 GB RAM | 100 Gbps HDR Infiniband**
+
+    [:octicons-arrow-right-24: Bell User Guide :octicons-link-external-16:](https://www.rcac.purdue.edu/knowledge/bell)
+
+-   :material-server:{ .lg .middle } __Negishi__
+
+    ---
+
+    Community Cluster optimized for communities running traditional, tightly-coupled science and engineering applications. Built through a partnership with Dell and AMD, Negishi consists of compute nodes with two 64-core AMD EPYC "Milan" processors and 256 GB of memory.
+
+    **128 cores/node | 256 GB RAM | 100 Gbps HDR Infiniband**
+
+    [:octicons-arrow-right-24: Negishi User Guide :octicons-link-external-16:](https://www.rcac.purdue.edu/knowledge/negishi)
+
+-   :material-server:{ .lg .middle } __Gilbreth__
+
+    ---
+
+    Community Cluster optimized for communities running GPU intensive applications such as machine learning. Consists of Dell compute nodes with Intel Xeon processors and Nvidia Tesla GPUs.
+
+    [:octicons-arrow-right-24: Gilbreth User Guide :octicons-link-external-16:](https://www.rcac.purdue.edu/knowledge/gilbreth)
+
+-   :material-server:{ .lg .middle } __Scholar__
+
+    ---
+
+    A small cluster suitable for classroom learning about high performance computing. Consists of 6 interactive login servers and 16 batch worker nodes, accessible as a typical cluster with a job scheduler or as an interactive resource with a desktop-like environment.
+
+    [:octicons-arrow-right-24: Scholar User Guide :octicons-link-external-16:](https://www.rcac.purdue.edu/knowledge/scholar)
 
 </div>
 
@@ -128,7 +164,7 @@ Follow these steps to get up and running on our clusters.
 
 </div>
 
-## :material-bookshelf: Resources
+## :material-bookshelf: RCAC Resources
 
 <div class="grid cards" markdown>
 
