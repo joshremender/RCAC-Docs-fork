@@ -82,35 +82,156 @@ th, td {
     background-color: hsla(var(--md-hue),25%,25%,1)
 }
 
-/* Let MkDocs Material control tables */
-#appTable th,
-#appTable td {
-  background: inherit !important;
-  color: inherit !important;
-}
+/* ===== App Catalog Table (#appTable) ===== */
 
-/* Restore MkDocs default borders */
-#appTable,
-#appTable th,
-#appTable td {
-  border: 1px solid var(--md-typeset-table-color, rgba(0, 0, 0, 0.12));
+/* Base table */
+#appTable {
+  width: 100%;
   border-collapse: collapse;
+  font-size: 0.78rem;
 }
 
-/* Make TableFilter filter row follow MkDocs theme */
+/* All cells - use theme variables so light/dark mode both work */
+#appTable th,
+#appTable td {
+  background-color: var(--md-default-bg-color) !important;
+  color: var(--md-default-fg-color) !important;
+  border: 1px solid var(--md-typeset-table-color, rgba(0, 0, 0, 0.12));
+  padding: 8px 12px;
+  vertical-align: top;
+}
+
+/* Column header row (Application / Topic / Available at) */
+#appTable thead tr:not(.fltrow) th {
+  background-color: var(--md-default-fg-color--lightest) !important;
+  font-weight: 600;
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+/* CSS-only sort indicators (replaces PNG-based ones from tablefilter.css) */
+#appTable thead tr:not(.fltrow) th .sort-arrow { display: none; }
+#appTable thead tr:not(.fltrow) th::after {
+  content: " ⇅";
+  opacity: 0.25;
+  font-size: 0.75em;
+}
+#appTable thead tr:not(.fltrow) th.ascending::after {
+  content: " ▲";
+  opacity: 0.8;
+  color: var(--md-accent-fg-color);
+}
+#appTable thead tr:not(.fltrow) th.descending::after {
+  content: " ▼";
+  opacity: 0.8;
+  color: var(--md-accent-fg-color);
+}
+
+/* Column header with an active filter */
+#appTable thead tr:not(.fltrow) th.activeHeader {
+  background-color: var(--md-typeset-table-color) !important;
+  color: var(--md-default-fg-color) !important;
+}
+
+/* Filter row */
 #appTable .fltrow th,
 #appTable .fltrow td {
   background-color: var(--md-default-bg-color) !important;
   color: var(--md-default-fg-color) !important;
-  border: 1px solid var(--md-typeset-table-color, rgba(0,0,0,.12)) !important;
+  border: 1px solid var(--md-typeset-table-color, rgba(0, 0, 0, 0.12));
+  padding: 4px 6px;
 }
 
-/* Ensure inputs/selects in filter row match theme */
+/* Filter inputs and token selects */
+#appTable .flt,
+#appTable .flt_s,
 #appTable .fltrow input,
-#appTable .fltrow select {
+#appTable .fltrow select,
+.tf-token-select {
   background-color: var(--md-default-bg-color) !important;
   color: var(--md-default-fg-color) !important;
-  border: 1px solid var(--md-typeset-table-color, rgba(0,0,0,.12)) !important;
+  border: 1px solid var(--md-typeset-table-color, rgba(0, 0, 0, 0.12)) !important;
+  border-radius: 3px;
+  padding: 3px 6px;
+  font-size: 0.78rem;
+  font-family: inherit;
+  width: 100%;
+  box-sizing: border-box;
+}
+#appTable .flt:focus,
+#appTable .flt_s:focus,
+#appTable .fltrow input:focus,
+#appTable .fltrow select:focus,
+.tf-token-select:focus {
+  outline: 2px solid var(--md-accent-fg-color);
+  outline-offset: -1px;
+}
+
+/* Alternating body rows */
+#appTable tbody tr:nth-child(even) td {
+  background-color: var(--md-code-bg-color) !important;
+}
+
+/* Row hover */
+#appTable tbody tr:hover td {
+  background-color: var(--md-default-fg-color--lightest) !important;
+}
+
+/* Info bar (rows counter + reset button) */
+.inf {
+  background-color: var(--md-default-bg-color) !important;
+  color: var(--md-default-fg-color) !important;
+  border: 1px solid var(--md-typeset-table-color, rgba(0, 0, 0, 0.12));
+  border-radius: 3px;
+  font-size: 0.78rem;
+  height: auto !important;
+  min-width: unset !important;
+}
+.inf a {
+  color: var(--md-typeset-a-color) !important;
+}
+
+/* Reset button */
+input.reset {
+  background-color: var(--md-default-bg-color) !important;
+  color: var(--md-default-fg-color) !important;
+  border: 1px solid var(--md-typeset-table-color, rgba(0, 0, 0, 0.12)) !important;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  height: auto !important;
+  width: auto !important;
+  background-image: none !important;
+}
+input.reset:hover {
+  background-color: var(--md-default-fg-color--lightest) !important;
+}
+
+/* No results message */
+.no-results {
+  background-color: var(--md-default-bg-color) !important;
+  color: var(--md-default-fg-color) !important;
+  display: block !important;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Table cell wrapping fix (previously in tablefilter.css) */
+.md-typeset table td,
+.md-typeset table th,
+#appTable td,
+#appTable th {
+  white-space: normal;
+  overflow-wrap: anywhere;
+  text-overflow: clip;
+}
+.md-typeset table pre,
+#appTable pre {
+  white-space: pre-wrap !important;
+  word-break: break-word;
+  overflow-x: auto;
 }
 
 /* style for breadcrumbs */

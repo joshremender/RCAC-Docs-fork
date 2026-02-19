@@ -236,6 +236,6 @@ Follow these steps to get up and running on our clusters.
 
     Find office hours, phone numbers, and other ways to connect with the RCAC support team.
 
-    [:octicons-arrow-right-24: Full contact info](https://www.rcac.purdue.edu/contact)
+    [:octicons-arrow-right-24: Full contact info](https://www.rcac.purdue.edu/about/contact)
 
 </div>
