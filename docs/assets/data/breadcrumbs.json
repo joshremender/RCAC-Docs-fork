@@ -451,12 +451,12 @@
     "RCAC Workshops",
     "Anvil Kubernetes"
   ],
-  "/tags/": [
-    "Home",
-    "Tags"
-  ],
   "/contact/": [
     "Home",
     "Contact us"
+  ],
+  "/faq/": [
+    "Home",
+    "FAQs"
   ]
 }
