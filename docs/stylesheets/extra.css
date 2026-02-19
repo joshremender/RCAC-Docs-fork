@@ -158,13 +158,12 @@ th, td {
   background-color: var(--md-default-fg-color--lightest) !important;
 }
 
-/* Counter cell injected into the filter row */
-#appTable .fltrow th.tf-counter-cell {
-  white-space: nowrap;
-  vertical-align: middle;
-  font-size: 0.78rem;
-  font-weight: normal;
-  padding: 4px 12px;
+/* Rows counter injected below the first filter input */
+#tf-row-counter {
+  display: block;
+  margin-top: 4px;
+  font-size: 0.75rem;
+  opacity: 0.75;
 }
 
 /* Hide the built-in .inf bar (counter moved into filter row) */

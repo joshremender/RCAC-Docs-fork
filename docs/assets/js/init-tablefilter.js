@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
   buildTokensDropdown(1, 'Any Topic');
   buildTokensDropdown(2, 'Any Cluster');
 
-  // Inline rows counter: add a 4th cell to the filter row
+  // Inline rows counter: append into the first filter cell (below "Start typing...")
   function setupInlineCounter() {
     const table = document.getElementById('appTable');
     if (!table) return;
@@ -103,13 +103,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const fltRow = table.querySelector('.fltrow');
     if (!fltRow) return;
 
-    const counterTh = document.createElement('th');
-    counterTh.className = 'tf-counter-cell';
+    const firstCell = fltRow.cells[0];
+    if (!firstCell) return;
 
     const counterSpan = document.createElement('span');
     counterSpan.id = 'tf-row-counter';
-    counterTh.appendChild(counterSpan);
-    fltRow.appendChild(counterTh);
+    firstCell.appendChild(counterSpan);
 
     updateCounter();
   }
