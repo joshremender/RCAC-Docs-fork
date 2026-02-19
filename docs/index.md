@@ -5,12 +5,14 @@ hide:
 #   - navigation
 ---
 
-!!! info "Announcements"
+# Welcome to RCAC Documentation
+
+!!! Warning "Announcement"
     **This is a demo site.** You are visiting a demo site designed for testing purposes only. Contents on this website may not reflect production RCAC resources. Check [rcac.purdue.edu](https://www.rcac.purdue.edu) for official information.
 
 ## :material-rocket-launch: New to RCAC?
 
-Follow these steps to get up and running on our clusters.
+Follow these steps to get up and running on RCAC clusters.
 
 <div class="grid cards" markdown>
 
@@ -18,17 +20,17 @@ Follow these steps to get up and running on our clusters.
 
     ---
 
-    Request access to RCAC computing resources through your Purdue career account or an ACCESS allocation.
+    Request access to RCAC computing resources through your Purdue career account or an ACCESS account.
 
-    [:octicons-arrow-right-24: Request an account](https://www.rcac.purdue.edu/account/request)
+    [:octicons-arrow-right-24: Purdue account](https://www.rcac.purdue.edu/account/request) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:octicons-arrow-right-24: ACCESS account](userguides/anvil/access/)
 
--   :material-connection:{ .lg .middle } __Connect to a Cluster__
+-   :material-connection:{ .lg .middle } __Connect to a RCAC Cluster__
 
     ---
 
     Learn how to log in via SSH, set up your environment, and access the cluster for the first time.
 
-    [:octicons-arrow-right-24: Connection guide](userguides/gautschi/accounts.md)
+    [:octicons-arrow-right-24: Connection guide](faq/#how-do-i-connect-to-a-rcac-cluster)
 
 -   :material-folder-upload:{ .lg .middle } __Transfer Your Data__
 
@@ -36,7 +38,7 @@ Follow these steps to get up and running on our clusters.
 
     Move files to and from the cluster using SCP, SFTP, Globus, or the research data depot.
 
-    [:octicons-arrow-right-24: Data transfer](userguides/gautschi/storage.md)
+    [:octicons-arrow-right-24: Data transfer](faq/#how-can-i-transfer-my-data-from-local-devices-to-rcac-resources)
 
 -   :material-play-circle:{ .lg .middle } __Submit Your First Job__
 
@@ -44,7 +46,7 @@ Follow these steps to get up and running on our clusters.
 
     Write a Slurm batch script, submit it to the scheduler, and monitor your job's progress.
 
-    [:octicons-arrow-right-24: Job submission guide](userguides/gautschi/run_jobs/index.md)
+    [:octicons-arrow-right-24: Job submission guide](faq/#i-have-access-to-cluster-how-to-submit-my-jobs-there)
 
 </div>
 
@@ -110,7 +112,7 @@ Follow these steps to get up and running on our clusters.
 
 </div>
 
-## :material-lightning-bolt: Common Tasks
+<!-- ## :material-lightning-bolt: Common Tasks
 
 <div class="grid cards" markdown>
 
@@ -162,7 +164,7 @@ Follow these steps to get up and running on our clusters.
 
     [:octicons-arrow-right-24: Frequently asked questions](userguides/gautschi/faq.md)
 
-</div>
+</div> -->
 
 ## :material-bookshelf: RCAC Resources
 
