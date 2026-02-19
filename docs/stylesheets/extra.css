@@ -158,36 +158,20 @@ th, td {
   background-color: var(--md-default-fg-color--lightest) !important;
 }
 
-/* Info bar (rows counter + reset button) */
-.inf {
-  background-color: var(--md-default-bg-color) !important;
-  color: var(--md-default-fg-color) !important;
-  border: 1px solid var(--md-typeset-table-color, rgba(0, 0, 0, 0.12));
-  border-radius: 3px;
+/* Counter cell injected into the filter row */
+#appTable .fltrow th.tf-counter-cell {
+  white-space: nowrap;
+  vertical-align: middle;
   font-size: 0.78rem;
-  height: auto !important;
-  min-width: unset !important;
-}
-.inf a {
-  color: var(--md-typeset-a-color) !important;
+  font-weight: normal;
+  padding: 4px 12px;
 }
 
-/* Reset button */
-input.reset {
-  background-color: var(--md-default-bg-color) !important;
-  color: var(--md-default-fg-color) !important;
-  border: 1px solid var(--md-typeset-table-color, rgba(0, 0, 0, 0.12)) !important;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 0.75rem;
-  padding: 2px 8px;
-  height: auto !important;
-  width: auto !important;
-  background-image: none !important;
+/* Hide the built-in .inf bar (counter moved into filter row) */
+.inf {
+  display: none !important;
 }
-input.reset:hover {
-  background-color: var(--md-default-fg-color--lightest) !important;
-}
+
 
 /* No results message */
 .no-results {

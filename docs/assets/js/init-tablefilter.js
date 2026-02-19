@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var tf = new TableFilter('appTable', {
     base_path: '/assets/js/tablefilter/',   // adjust if you serve the assets from a different path
     paging: false,
-    rows_counter: true,
+    rows_counter: false,
     btn_reset: false,
     mark_active_columns: true,
     highlight_keywords: true,
@@ -11,12 +11,11 @@ document.addEventListener("DOMContentLoaded", function () {
     col_1: 'input',             // Topic → input (we'll add a clickable select next to it)
     col_2: 'input',             // Available at → input (we'll add a clickable select next to it)
     alternate_rows: false,
-    themes: [{ name: 'transparent'}], 
+    themes: [{ name: 'transparent'}],
     extensions: [],
     watermark: ['Start typing...', 'Topic...', 'Avalable cluster...'],
     auto_filter: { delay: 100 }, // milliseconds
     msg_filter: 'Filtering...',
-    rows_counter: { text: 'Application(s): ' },
     help_instructions: false
   });
 
@@ -90,11 +89,42 @@ document.addEventListener("DOMContentLoaded", function () {
       // ensure filter runs
       tf.filter();
     });
-
-    // Optional: clicking the empty option clears the input and triggers reset
   }
 
   // build dropdowns for the Topic and Available at columns (adjust indexes if needed)
   buildTokensDropdown(1, 'Any Topic');
   buildTokensDropdown(2, 'Any Cluster');
+
+  // Inline rows counter: add a 4th cell to the filter row
+  function setupInlineCounter() {
+    const table = document.getElementById('appTable');
+    if (!table) return;
+
+    const fltRow = table.querySelector('.fltrow');
+    if (!fltRow) return;
+
+    const counterTh = document.createElement('th');
+    counterTh.className = 'tf-counter-cell';
+
+    const counterSpan = document.createElement('span');
+    counterSpan.id = 'tf-row-counter';
+    counterTh.appendChild(counterSpan);
+    fltRow.appendChild(counterTh);
+
+    updateCounter();
+  }
+
+  function updateCounter() {
+    const span = document.getElementById('tf-row-counter');
+    if (!span) return;
+    const count = (tf.validRowsNb !== undefined && tf.validRowsNb !== null)
+      ? tf.validRowsNb
+      : tf.getRowsNb();
+    span.textContent = 'Application(s): ' + count;
+  }
+
+  setupInlineCounter();
+
+  // Update counter after each filter event
+  tf.emitter.on(['after-filtering'], updateCounter);
 });
