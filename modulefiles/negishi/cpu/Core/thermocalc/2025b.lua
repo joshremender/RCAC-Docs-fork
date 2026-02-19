@@ -8,13 +8,13 @@ To use TC-Python, you need to create an anaconda environment first. Please visit
 
 Example commands to install TC_Python into your anaconda environment in $HOME.
 
-        $ module load anaconda/2022.10-py39
+        $ module load conda
         $ module load thermocalc/2025b
 
         $ conda-env-mod create -n tcpython
         $ module load use.own
-        $ module load conda-env/tcpython-py3.9.13
-        $ pip install $TC25B_HOME/SDK/TC-Python/TC_Python-2025.2.174669.233-py3-none-any.whl
+        $ module load conda-env/tcpython-py3.12.11
+        $ pip install $TC25B_HOME/SDK/TC-Python/TC_Python-2025.2-30-py3-none-any.whl
 
 
 
