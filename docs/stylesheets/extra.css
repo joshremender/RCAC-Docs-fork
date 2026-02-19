@@ -105,27 +105,7 @@ th, td {
 #appTable thead tr:not(.fltrow) th {
   background-color: var(--md-default-fg-color--lightest) !important;
   font-weight: 600;
-  cursor: pointer;
-  user-select: none;
   white-space: nowrap;
-}
-
-/* CSS-only sort indicators (replaces PNG-based ones from tablefilter.css) */
-#appTable thead tr:not(.fltrow) th .sort-arrow { display: none; }
-#appTable thead tr:not(.fltrow) th::after {
-  content: " ⇅";
-  opacity: 0.25;
-  font-size: 0.75em;
-}
-#appTable thead tr:not(.fltrow) th.ascending::after {
-  content: " ▲";
-  opacity: 0.8;
-  color: var(--md-accent-fg-color);
-}
-#appTable thead tr:not(.fltrow) th.descending::after {
-  content: " ▼";
-  opacity: 0.8;
-  color: var(--md-accent-fg-color);
 }
 
 /* Column header with an active filter */

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     base_path: '/assets/js/tablefilter/',   // adjust if you serve the assets from a different path
     paging: false,
     rows_counter: true,
-    btn_reset: true,
+    btn_reset: false,
     mark_active_columns: true,
     highlight_keywords: true,
     // use input filters so we get substring/contains behaviour
@@ -12,11 +12,12 @@ document.addEventListener("DOMContentLoaded", function () {
     col_2: 'input',             // Available at → input (we'll add a clickable select next to it)
     alternate_rows: false,
     themes: [{ name: 'transparent'}], 
-    extensions: [{ name: 'sort' }],
+    extensions: [],
     watermark: ['Start typing...', 'Topic...', 'Avalable cluster...'],
     auto_filter: { delay: 100 }, // milliseconds
     msg_filter: 'Filtering...',
-    rows_counter: { text: 'Application(s): ' }
+    rows_counter: { text: 'Application(s): ' },
+    help_instructions: false
   });
 
   tf.init();
