@@ -94,6 +94,28 @@ echo $SLURM_CPUS_PER_TASK
 echo 'hi mom! i am using Anvil!!!'
 ```
 
+## Helpful Tips
+
+We will strive to ensure that Anvil serves as a valuable resource to the national research community. We hope that you the user will assist us by making note of the following:
+
+- You share Anvil with thousands of other users, and what you do on the system affects others. Exercise good citizenship to ensure that your activity does not adversely impact the system and the research community with whom you share it. For instance: do not run jobs on the login nodes and do not stress the filesystem.
+- Help us serve you better by filing informative [help desk tickets](https://support.access-ci.org/help-ticket). Before submitting a help desk ticket do check what the user guide and other documentation say. Search the internet for key phrases in your error logs; that's probably what the consultants answering your ticket are going to do. What have you changed since the last time your job succeeded?
+- **Describe your issue as precisely and completely as you can:** what you did, what happened, verbatim error messages, other meaningful output. When appropriate, include the information a consultant would need to find your artifacts and understand your workflow: e.g. the directory containing your build and/or job script; the modules you were using; relevant job numbers; and recent changes in your workflow that could affect or explain the behavior you're observing.
+- **Have realistic expectations.** Consultants can address system issues and answer questions about Anvil. But they can't teach parallel programming in a ticket and may know nothing about the package you downloaded. They may offer general advice that will help you build, debug, optimize, or modify your code, but you shouldn't expect them to do these things for you.
+- **Be patient.** It may take a couple of business days for a consultant to get back to you, especially if your issue is complex. It might take an exchange or two before you and the consultant are on the same page. If the admins disable your account, it's not punitive. When the file system is in danger of crashing, or a login node hangs, they don't have time to notify you before taking action.
+
+## Helpful Tools
+
+The Anvil cluster provides a list of useful auxiliary tools. The following table provides a list of auxiliary tools:
+
+|Tool|Use|
+|---|---|
+|**`userinfo <username>`**| See all groups you are a part of, as well as storage locations and associated accounts|
+|**`myquota`**|	Check the quota of different file systems.|
+|**`flost`**|A utility to recover files from snapshots.|
+|**`showpartitions`**|Display all Slurm partitions and their current usage.|
+|**`mybalance`**|Check the allocation usage of your project team.|
+
 ## Next Steps
 
 Please see the rest of our User Guide for more comprehensive information about Anvil.

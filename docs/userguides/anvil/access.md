@@ -53,27 +53,3 @@ As you can gather from [https://allocations.access-ci.org/project-types](https:/
 5. When your request is approved, you only get ACCESS credits awarded. You still need to go through the step of exchanging these credits for time on Anvil. You need not use up all your credits and may also use part of your credits for time on other ACCESS resources.
 6. You will also need to go to the allocations page and add any users you would like to have access to these resources. Note that they will need to sign up for ACCESS accounts as well before you can add them.
 7. For other questions you may have, take a look at [ACCESS policies](https://allocations.access-ci.org/allocations-policy).
-
-## Helpful Tips
-
-We will strive to ensure that Anvil serves as a valuable resource to the national research community. We hope that you the user will assist us by making note of the following:
-
-- You share Anvil with thousands of other users, and what you do on the system affects others. Exercise good citizenship to ensure that your activity does not adversely impact the system and the research community with whom you share it. For instance: do not run jobs on the login nodes and do not stress the filesystem.
-- Help us serve you better by filing informative help desk tickets. Before submitting a help desk ticket do check what the user guide and other documentation say. Search the internet for key phrases in your error logs; that's probably what the consultants answering your ticket are going to do. What have you changed since the last time your job succeeded?
-- **Describe your issue as precisely and completely as you can:** what you did, what happened, verbatim error messages, other meaningful output. When appropriate, include the information a consultant would need to find your artifacts and understand your workflow: e.g. the directory containing your build and/or job script; the modules you were using; relevant job numbers; and recent changes in your workflow that could affect or explain the behavior you're observing.
-- **Have realistic expectations.** Consultants can address system issues and answer questions about Anvil. But they can't teach parallel programming in a ticket and may know nothing about the package you downloaded. They may offer general advice that will help you build, debug, optimize, or modify your code, but you shouldn't expect them to do these things for you.
-- **Be patient.** It may take a business day for a consultant to get back to you, especially if your issue is complex. It might take an exchange or two before you and the consultant are on the same page. If the admins disable your account, it's not punitive. When the file system is in danger of crashing, or a login node hangs, they don't have time to notify you before taking action.
-
-!!! note "User GPU on Anvil"
-    For GPU jobs, make sure to use **`--gpus-per-node`** command, otherwise, your job may not run properly.
-
-## Helpful Tools
-
-The Anvil cluster provides a list of useful auxiliary tools. The following table provides a list of auxiliary tools:
-
-|Tool|Use|
-|---|---|
-|**`myquota`**|	Check the quota of different file systems.|
-|**`flost`**|A utility to recover files from snapshots.|
-|**`showpartitions`**|Display all Slurm partitions and their current usage.|
-|**`mybalance`**|Check the allocation usage of your project team.|
