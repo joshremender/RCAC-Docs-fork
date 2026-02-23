@@ -5,26 +5,17 @@ authors:
   - dane
   - elian
 draft: true
+host: anvil.rcac.purdue.edu
+hostname: anvil
 ---
 
-## Overview / Slurm Basics
+<!-- ------------------- General slurm overview SNIPPET -------------------- -->
+{% set host = "anvil.rcac.purdue.edu" %}
+{% set hostname = "anvil" %}
 
-Anvil uses the [Slurm Workload Manager](https://slurm.schedmd.com/) for job scheduling and management. With Slurm, a user requests resources and submits a job to a queue. The system takes jobs from queues, allocates the necessary compute nodes, and executes them.
+{{ slurm_general_overview(host, hostname) }}
 
-!!! note "SSHing into Anvil lands on login node"
-    Users will typically SSH to Anvil (`<username>.anvil.rcac.purdue.edu`) but note this lands you on a **login node**. Slurm should always be used to submit work as a job rather than running jobs directly on a login node.
-
-On Anvil, you don’t run programs directly on the system. Instead, you submit jobs to a queue. A queue is simply a waiting line for computing resources. When you submit a job, you tell the scheduler:
-
-- How many resources you need (cores, GPUs, memory, etc.)
-- How long the job will run
-- What type of hardware you need
-
-!!! warning "Running jobs on login node is against Anvil policy"
-    All users share the login nodes, and running anything but the smallest test job will negatively impact everyone's ability to use Anvil.
-
-The scheduler places your job in the appropriate queue and runs it when the requested resources become available. Different queues exist because different types of jobs have different needs. For example, some jobs need GPUs, some need large memory, and some only run for a short time. Separating these helps the system run efficiently and fairly for everyone.
-
+<!-- --------------------------- Anvil-Specific ---------------------------- -->
 ACCESS users with allocations can submit jobs to several types of queues:
 
 - CPU queues – Standard computing jobs
