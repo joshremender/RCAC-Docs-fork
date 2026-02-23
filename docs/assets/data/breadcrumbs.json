@@ -1,136 +1,172 @@
 {
   "/userguides/anvil/": [
     "Home",
-    "Anvil User Guide"
+    "Anvil"
   ],
   "/userguides/anvil/overview/": [
     "Home",
-    "Anvil User Guide",
+    "Anvil",
     "Overview"
   ],
   "/userguides/anvil/architecture/": [
     "Home",
-    "Anvil User Guide",
+    "Anvil",
     "System Architecture"
   ],
   "/userguides/anvil/access/": [
     "Home",
-    "Anvil User Guide",
+    "Anvil",
     "Access to Anvil"
   ],
   "/userguides/anvil/getting-started/": [
     "Home",
-    "Anvil User Guide",
+    "Anvil",
     "Getting Started"
   ],
   "/userguides/anvil/jobs/": [
     "Home",
-    "Anvil User Guide",
+    "Anvil",
     "Job Submission"
   ],
   "/userguides/anvil/file_management/": [
     "Home",
-    "Anvil User Guide",
+    "Anvil",
     "File Management"
   ],
   "/userguides/anvil/anvil-software/": [
     "Home",
-    "Anvil User Guide",
+    "Anvil",
     "Anvil Software"
   ],
   "/userguides/anvil/help/": [
     "Home",
-    "Anvil User Guide",
+    "Anvil",
     "Help Desk"
   ],
   "/userguides/anvil/composable/getting-started/": [
     "Home",
-    "Anvil User Guide",
+    "Anvil",
     "Getting Started"
   ],
   "/userguides/anvil/composable/concepts/": [
     "Home",
-    "Anvil User Guide",
+    "Anvil",
     "Concepts"
   ],
   "/userguides/anvil/composable/examples/": [
     "Home",
-    "Anvil User Guide",
+    "Anvil",
     "Examples"
   ],
   "/userguides/anvil/anvilgpt/": [
     "Home",
-    "Anvil User Guide",
+    "Anvil",
     "AnvilGPT (LLM)"
   ],
   "/userguides/anvil/notebook/": [
     "Home",
-    "Anvil User Guide",
+    "Anvil",
     "Anvil Notebook"
   ],
   "/userguides/anvil/maintenance/": [
     "Home",
-    "Anvil User Guide",
+    "Anvil",
     "Maintenance Log"
   ],
   "/userguides/anvil/policies/": [
     "Home",
-    "Anvil User Guide",
+    "Anvil",
     "Policies"
   ],
   "/userguides/gautschi/": [
     "Home",
-    "Gautschi User Guide"
+    "Gautschi"
   ],
   "/userguides/gautschi/overview/": [
     "Home",
-    "Gautschi User Guide",
+    "Gautschi",
     "Gautschi Overview"
   ],
   "/userguides/gautschi/biography/": [
     "Home",
-    "Gautschi User Guide",
+    "Gautschi",
     "Biography of Gautschi"
   ],
   "/userguides/gautschi/accounts/": [
     "Home",
-    "Gautschi User Guide",
+    "Gautschi",
     "Accounts"
   ],
   "/userguides/gautschi/software/": [
     "Home",
-    "Gautschi User Guide",
+    "Gautschi",
     "Software"
   ],
   "/userguides/gautschi/run_jobs/": [
     "Home",
-    "Gautschi User Guide",
+    "Gautschi",
     "Running Jobs"
   ],
   "/userguides/gautschi/storage/": [
     "Home",
-    "Gautschi User Guide",
+    "Gautschi",
     "File Storage and Transfer"
   ],
   "/userguides/gautschi/gateway/": [
     "Home",
-    "Gautschi User Guide",
+    "Gautschi",
     "Gateway (Open OnDemand)"
   ],
   "/userguides/gautschi/compile/": [
     "Home",
-    "Gautschi User Guide",
+    "Gautschi",
     "Compiling Source Code"
   ],
   "/userguides/gautschi/faq/": [
     "Home",
-    "Gautschi User Guide",
+    "Gautschi",
     "Frequently Asked Questions"
   ],
   "/userguides/gautschi/datasets/": [
     "Home",
-    "Gautschi User Guide",
+    "Gautschi",
     "Datasets"
+  ],
+  "/https://www.rcac.purdue.edu/knowledge/bell": [
+    "Home",
+    "Bell"
+  ],
+  "/https://www.rcac.purdue.edu/knowledge/negishi": [
+    "Home",
+    "Negishi"
+  ],
+  "/https://www.rcac.purdue.edu/knowledge/gilbreth": [
+    "Home",
+    "Gilbreth"
+  ],
+  "/https://www.rcac.purdue.edu/knowledge/scholar": [
+    "Home",
+    "Scholar"
+  ],
+  "/https://www.rcac.purdue.edu/knowledge/depot": [
+    "Home",
+    "Data Depot"
+  ],
+  "/https://www.rcac.purdue.edu/knowledge/fortress": [
+    "Home",
+    "Fortress"
+  ],
+  "/https://www.rcac.purdue.edu/knowledge/scratch": [
+    "Home",
+    "Scratch"
+  ],
+  "/https://www.rcac.purdue.edu/knowledge/home": [
+    "Home",
+    "Home Directory"
+  ],
+  "/https://www.rcac.purdue.edu/knowledge/boxfolder": [
+    "Home",
+    "Box Research Lab Folder"
   ],
   "/blog/": [
     "Home",
@@ -415,12 +451,12 @@
     "RCAC Workshops",
     "Anvil Kubernetes"
   ],
-  "/tags/": [
-    "Home",
-    "Tags"
-  ],
   "/contact/": [
     "Home",
     "Contact us"
+  ],
+  "/faq/": [
+    "Home",
+    "FAQs"
   ]
 }
