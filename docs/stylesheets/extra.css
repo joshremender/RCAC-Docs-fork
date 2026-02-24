@@ -181,16 +181,17 @@ th, td {
   text-align: center;
 }
 
-/* Table cell wrapping fix (previously in tablefilter.css) */
-.md-typeset table td,
-.md-typeset table th,
+/* Table cell wrapping fix — scoped to .md-typeset__table (markdown tables only)
+   to avoid breaking code block tables (Material uses <table> internally when linenums: true) */
+.md-typeset__table td,
+.md-typeset__table th,
 #appTable td,
 #appTable th {
   white-space: normal;
   overflow-wrap: anywhere;
   text-overflow: clip;
 }
-.md-typeset table pre,
+.md-typeset__table pre,
 #appTable pre {
   white-space: pre-wrap !important;
   word-break: break-word;
