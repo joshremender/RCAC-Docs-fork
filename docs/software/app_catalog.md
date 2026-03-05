@@ -9,7 +9,7 @@ hide:
 # All software and versions on RCAC clusters
 
 ## Overview
-As of **March 04, 2026**, there have been a total of **273** applications with **2498** available versions deployed across **6** RCAC HPC clusters: **ANVIL, BELL, GAUTSCHI, GILBRETH, NEGISHI, SCHOLAR**.
+As of **March 05, 2026**, there have been a total of **273** applications with **2499** available versions deployed across **6** RCAC HPC clusters: **ANVIL, BELL, GAUTSCHI, GILBRETH, NEGISHI, SCHOLAR**.
 
 ## Applications Catalog
 
@@ -431,7 +431,7 @@ As of **March 04, 2026**, there have been a total of **273** applications with *
     <tr>
       <td><a href="../apps_md/gurobi"><strong>gurobi</strong></a></td>
       <td>Math/Stat, Engineering</td>
-      <td>ANVIL, BELL, GAUTSCHI, NEGISHI, SCHOLAR</td>
+      <td>ANVIL, BELL, GAUTSCHI, GILBRETH, NEGISHI, SCHOLAR</td>
     </tr>
     <tr>
       <td><a href="../apps_md/hadoop"><strong>hadoop</strong></a></td>
