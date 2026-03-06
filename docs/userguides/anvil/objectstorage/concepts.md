@@ -13,7 +13,20 @@ draft: false
 # Object Storage Concepts
 To effectively use Anvil Object Storage, it is essential to understand how it differs from the traditional "Project" or "Home" directories you use on the supercomputer. While traditional storage is hierarchical (folders inside folders), object storage is flat.
 
-## Core Terminology
+## Storage Comparison: When to Use S3
+
+| Feature | Anvil Object Storage (S3) | $SCRATCH (GPFS) | Project Storage (GPFS) | $HOME (NFS) |
+|--------|---------------------------|-------------------|-----------------|-------------|
+| **Primary Protocol** | REST API (HTTP/HTTPS) | POSIX (File System) | POSIX (File System) | POSIX (File System) |
+| **Best For** | Archival, ML datasets, large shared datasets | High-speed temporary computation | Shared project data and collaboration | Code, config files, small scripts |
+| **Retention** | Persistent (no purge) | 30-day purge | Persistent (protected with snapshots) | Persistent (protected with snapshots) |
+| **Access Method** | Tools (`rclone`, `boto3`, `s3cmd`) | Native OS commands (`cd`, `ls`) | Native OS commands | Native OS commands |
+| **Metadata** | Customizable, searchable | Fixed (system attributes) | Fixed | Fixed |
+| **Typical Use Case** | Data lakes, ML training datasets | Running jobs and temporary job outputs | Long-term shared data for a research group | Personal configs and scripts |
+
+## The Object Model 
+To use tools effectively, you must understand these core terminologies:
+
 ### Objects
 An Object is the fundamental unit of storage. Unlike a simple file, an object is a "bundle" that consists of:
 
@@ -23,12 +36,10 @@ An Object is the fundamental unit of storage. Unlike a simple file, an object is
 
 - **A Unique Key:** The unique identifier used to find the object.
 
-Anvil supports objects up to 5 TB in size.
-
 ### Buckets
-A Bucket is a top-level container for objects. You can think of a bucket as a "root directory," but with one key difference: buckets cannot be nested inside other buckets.
+A Bucket is a top-level container for objects. You can think of a bucket as a "directory," but with one key difference: buckets cannot be nested inside other buckets.
 
-- **Unique Naming:** Bucket names must be globally unique across the entire Anvil storage system.
+- **Unique Naming:** Bucket names must be globally unique across the entire Anvil object storage system.
 
 - **Flat Structure:** In the background, every object in a bucket is stored at the same level.
 
@@ -41,7 +52,4 @@ The Key is the full name of the object. While object storage is flat, it "mimics
 
 ### Metadata
 Metadata is "data about your data." In Anvil, every object has System Metadata (like file size and last modified date) and can have Custom Metadata. Custom metadata allows you to tag files with experimental parameters, making it possible to search through millions of objects without opening them.
-
-
-
 
