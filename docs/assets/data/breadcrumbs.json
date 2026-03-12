@@ -58,6 +58,31 @@
     "Anvil",
     "Examples"
   ],
+  "/userguides/anvil/objectstorage/": [
+    "Home",
+    "Anvil",
+    "Getting Started"
+  ],
+  "/userguides/anvil/objectstorage/concepts/": [
+    "Home",
+    "Anvil",
+    "Object Storage Concepts"
+  ],
+  "/userguides/anvil/objectstorage/access/": [
+    "Home",
+    "Anvil",
+    "Access"
+  ],
+  "/userguides/anvil/objectstorage/usertools/": [
+    "Home",
+    "Anvil",
+    "User Tools"
+  ],
+  "/userguides/anvil/objectstorage/acl/": [
+    "Home",
+    "Anvil",
+    "Security and Access Control"
+  ],
   "/userguides/anvil/anvilgpt/": [
     "Home",
     "Anvil",
