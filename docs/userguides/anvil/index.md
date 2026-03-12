@@ -19,6 +19,7 @@
 - [**Anvil Composable Subsystem**](composable/getting-started.md)
 - [**AnvilGPT (LLM)**](anvilgpt.md)
 - [**Anvil Notebook**](notebook.md)
+- [**Anvil Object Storage**](objectstorage/index.md)
 
 ## <a href="maintenance">Maintenance Log</a>
 
