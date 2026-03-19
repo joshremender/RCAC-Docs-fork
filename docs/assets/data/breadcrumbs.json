@@ -43,44 +43,62 @@
     "Anvil",
     "Help Desk"
   ],
+  "/userguides/anvil/composable/": [
+    "Home",
+    "Anvil",
+    "Anvil Composable Subsystem"
+  ],
   "/userguides/anvil/composable/getting-started/": [
     "Home",
     "Anvil",
+    "Anvil Composable Subsystem",
     "Getting Started"
   ],
   "/userguides/anvil/composable/concepts/": [
     "Home",
     "Anvil",
+    "Anvil Composable Subsystem",
     "Concepts"
   ],
   "/userguides/anvil/composable/examples/": [
     "Home",
     "Anvil",
+    "Anvil Composable Subsystem",
     "Examples"
   ],
   "/userguides/anvil/objectstorage/": [
     "Home",
     "Anvil",
+    "Anvil Object Storage"
+  ],
+  "/userguides/anvil/objectstorage/getting-started/": [
+    "Home",
+    "Anvil",
+    "Anvil Object Storage",
     "Getting Started"
   ],
   "/userguides/anvil/objectstorage/concepts/": [
     "Home",
     "Anvil",
+    "Anvil Object Storage",
     "Object Storage Concepts"
   ],
   "/userguides/anvil/objectstorage/access/": [
     "Home",
     "Anvil",
+    "Anvil Object Storage",
     "Access"
   ],
   "/userguides/anvil/objectstorage/usertools/": [
     "Home",
     "Anvil",
+    "Anvil Object Storage",
     "User Tools"
   ],
   "/userguides/anvil/objectstorage/acl/": [
     "Home",
     "Anvil",
+    "Anvil Object Storage",
     "Security and Access Control"
   ],
   "/userguides/anvil/anvilgpt/": [
