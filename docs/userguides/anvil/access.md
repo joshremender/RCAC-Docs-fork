@@ -6,7 +6,7 @@ authors:
   - jin456
 search:
   boost: 2
-draft: false
+draft: true
 ---
 
 ## Obtaining an Account

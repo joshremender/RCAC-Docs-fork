@@ -11,5 +11,54 @@ draft: false
 [Back to Anvil Object Storage](../index.md)
 
 # Getting Access and Connecting to Object Storage
-!!! note 
-    For technical assistance or to request access keys, please contact the RCAC help desk at rcac-help@purdue.edu.
+## Eligibility
+Access is provisioned separately from Anvil login credentials. It is available to Anvil allocations. 
+
+## Request Process
+
+To request access to Anvil Object Storage, follow the steps below:
+
+### 1. Submit a Support Ticket
+
+Choose one of the following portals:
+
+- **ACCESS:** <https://support.access-ci.org/open-a-ticket>  
+- **NAIRR:** <https://nairrpilot.org/open-support-request>  
+
+---
+
+### 2. Use the Correct Subject Line
+
+> **Request for Anvil Object Storage Access**
+
+---
+
+### 3. Include Required Information
+
+Make sure your request contains:
+
+- **Project name or allocation ID**  
+- **Brief description of your use case**  
+- **Dataset(s) you intend to store or access**  
+
+You will be provided with credentials after you submit the request.
+
+---
+
+### 4. Security & Credentials
+Object storage uses HMAC credentials, not your ACCESS/NAIRR account password.
+
+- **Access Key ID:** 20-character alphanumeric string (Public identifier).
+- **Secret Access Key:** 40-character string (Private signature key).
+
+---
+
+### 5. Connecting to Storage
+Connection Parameters: 
+
+- **Endpoint URL:** https://s3.anvil.rcac.purdue.edu
+- **Addressing Style:** Path-style is preferred (e.g., endpoint/bucket/object).
+
+!!! note
+    Check the user tool documentation for instructions on how to connect using tools such as `rclone`, `s3cmd`, and others.
+---

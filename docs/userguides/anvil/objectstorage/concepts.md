@@ -10,6 +10,7 @@ draft: false
 ---
 [Back to Anvil Object Storage](../index.md)
 
+
 # Object Storage Concepts
 To effectively use Anvil Object Storage, it is essential to understand how it differs from the traditional "Project" or "Home" directories you use on the supercomputer. While traditional storage is hierarchical (folders inside folders), object storage is flat.
 
@@ -23,6 +24,8 @@ To effectively use Anvil Object Storage, it is essential to understand how it di
 | **Access Method** | Tools (`rclone`, `boto3`, `s3cmd`) | Native OS commands (`cd`, `ls`) | Native OS commands | Native OS commands |
 | **Metadata** | Customizable, searchable | Fixed (system attributes) | Fixed | Fixed |
 | **Typical Use Case** | Data lakes, ML training datasets | Running jobs and temporary job outputs | Long-term shared data for a research group | Personal configs and scripts |
+
+---
 
 ## The Object Model 
 To use tools effectively, you must understand these core terminologies:
