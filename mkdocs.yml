@@ -88,11 +88,13 @@ nav:
       - Anvil Software: userguides/anvil/anvil-software.md
       - Help Desk: userguides/anvil/help.md
       - Anvil Composable Subsystem:
+        - userguides/anvil/composable/index.md
         - Getting Started: userguides/anvil/composable/getting-started.md
         - Concepts: userguides/anvil/composable/concepts.md
         - Examples: userguides/anvil/composable/examples.md
       - Anvil Object Storage: 
-        - Getting Started: userguides/anvil/objectstorage/index.md
+        - userguides/anvil/objectstorage/index.md
+        - Getting Started: userguides/anvil/objectstorage/getting-started.md
         - Object Storage Concepts: userguides/anvil/objectstorage/concepts.md
         - Access: userguides/anvil/objectstorage/access.md
         - User Tools: userguides/anvil/objectstorage/usertools.md
