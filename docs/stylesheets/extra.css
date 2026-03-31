@@ -392,11 +392,22 @@ th, td {
   color: var(--md-default-fg-color);
 }
 
-/* Headerlink anchors (¶): base color rgba(0,0,0,0.32) ≈ 2.24:1 — fix to #595959 (7.0:1).
-   Note: Material also applies opacity:0 by default; a11y.js adds aria-hidden to these
-   decorative elements so WAVE does not evaluate them in their invisible state. */
+/* Headerlink anchors (¶): Material uses opacity:0 to hide them by default.
+   WAVE evaluates opacity:0 elements for contrast (flags rgba(0,0,0,0.32)≈2.24:1).
+   Adding visibility:hidden alongside opacity:0 fixes this: WAVE skips
+   visibility:hidden elements. The transition preserves the fade-in on hover/focus. */
 .md-typeset .headerlink {
   color: #595959;
+  opacity: 0;
+  visibility: hidden;
+  transition: color .25s, opacity 125ms, visibility 0s 125ms;
+}
+.md-typeset :hover > .headerlink,
+.md-typeset :target > .headerlink,
+.md-typeset .headerlink:focus {
+  opacity: 1;
+  visibility: visible;
+  transition: color .25s, opacity 125ms, visibility 0s;
 }
 
 /* Warning admonition: #ff9100 is 2.26:1 against near-white — fix to #8b4a00 (6.8:1) */
