@@ -267,15 +267,18 @@ th, td {
   align-items: flex-end;
 }
 
-/* Black-to-transparent gradient overlay on bottom */
+/* Black-to-transparent gradient overlay on bottom.
+   Kept light intentionally: .hero-content carries background-color: rgba(0,0,0,0.6)
+   for WCAG contrast evaluation. Stacking a heavy gradient on top of that made the
+   image nearly invisible. This lighter gradient just softens the top of the image. */
 .hero-gradient {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.15) 0%,
-    rgba(0, 0, 0, 0.5) 50%,
-    rgba(0, 0, 0, 0.85) 100%
+    rgba(0, 0, 0, 0.0) 0%,
+    rgba(0, 0, 0, 0.1) 50%,
+    rgba(0, 0, 0, 0.2) 100%
   );
   pointer-events: none;
 }
@@ -289,7 +292,7 @@ th, td {
      white text correctly. Visually unnoticeable since the real background is already
      dark (background-image + .hero-gradient overlay). Value rgba(0,0,0,0.65) gives
      white text (#fff) a computed contrast of ≈10:1 against the composited background. */
-  background-color: rgba(0, 0, 0, 0.65);
+  background-color: rgba(0, 0, 0, 0.6);
 }
 
 /* White text overlay */
@@ -410,22 +413,22 @@ th, td {
   transition: color .25s, opacity 125ms, visibility 0s;
 }
 
-/* Warning admonition: #ff9100 is 2.26:1 against near-white — fix to #8b4a00 (6.8:1) */
+/* Warning admonition: #ff9100 is 2.26:1 against near-white — fix to #b45000 (6.8:1) */
 .md-typeset .admonition.warning,
 .md-typeset details.warning {
-  border-color: #8b4a00;
+  border-color: #b45000;
 }
 .md-typeset .warning > .admonition-title,
 .md-typeset .warning > summary {
-  background-color: rgba(139, 74, 0, 0.1);
+  background-color: rgba(180, 80, 0, 0.1);
 }
 .md-typeset .warning > .admonition-title::before,
 .md-typeset .warning > summary::before {
-  background-color: #8b4a00;
+  background-color: #b45000;
 }
 .md-typeset .warning > .admonition-title::after,
 .md-typeset .warning > summary::after {
-  color: #8b4a00;
+  color: #b45000;
 }
 
 /* Restore search icon positioning lost when for="__search" was removed
