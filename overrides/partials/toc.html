@@ -21,7 +21,7 @@
 
   <!-- Table of contents title and list -->
   {% if toc %}
-    <label class="md-nav__title" for="__toc">
+    <label class="md-nav__title" onclick="var t=document.getElementById('__toc');if(t)t.checked=false;">
       <span class="md-nav__icon md-icon"></span>
       {{ title }}
     </label>

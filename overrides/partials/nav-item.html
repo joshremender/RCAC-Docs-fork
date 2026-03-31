@@ -111,7 +111,7 @@
           </div>
         {% endif %}
         <nav class="md-nav" data-md-level="{{ level }}" aria-labelledby="{{ path }}_label" aria-expanded="{{ nav_item.active | tojson }}">
-          <label class="md-nav__title" for="{{ path }}">
+          <label class="md-nav__title" onclick="var t=document.getElementById('{{ path }}');if(t)t.checked=false;">
             <span class="md-nav__icon md-icon"></span>
             {{ nav_item.title }}
           </label>

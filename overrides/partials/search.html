@@ -2,11 +2,11 @@
   This file was automatically generated - do not edit
 -#}
 <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search" aria-label="Close search"></label>
+  <label class="md-search__overlay" aria-label="Close search" onclick="var t=document.getElementById('__search');if(t)t.checked=false;"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
       <input type="text" class="md-search__input" name="query" aria-label="{{ lang.t('search.placeholder') }}" placeholder="{{ lang.t('search.placeholder') }}" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search" aria-label="{{ lang.t('search') }}">
+      <label class="md-search__icon md-icon" aria-label="{{ lang.t('search') }}" onclick="var t=document.getElementById('__search');if(t)t.checked=false;">
         {% set icon = config.theme.icon.search or "material/magnify" %}
         {% include ".icons/" ~ icon ~ ".svg" %}
         {% set icon = config.theme.icon.previous or "material/arrow-left" %}
