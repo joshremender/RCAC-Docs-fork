@@ -84,6 +84,35 @@ Date: 2026-03-31
 
 ---
 
+### Phase 4 — Remaining Heading Contrast Errors (SC 1.4.3)
+
+**Problem:** WAVE reported **7 remaining contrast errors** after Phase 3 — primarily on headings.
+
+**Root cause (three sources):**
+
+1. **Hero section white text (2 errors):** `.hero-text h1` and `.hero-text p` use `color: #fff` / `color: rgba(255,255,255,0.9)` but the actual background is a CSS `background-image` plus an absolutely-positioned `.hero-gradient` overlay. WAVE cannot resolve `background-image` or pseudo-element gradients as background; it falls back to white (`#fff`). White text on white background = 1:1 contrast → fails.
+
+2. **Content h1 color (up to 5 errors):** Material sets `.md-typeset h1 { color: var(--md-default-fg-color--light) }` = `rgba(0,0,0,0.54)` ≈ **4.09:1** against white. While h1 at 2em qualifies as large text (3:1 threshold), WAVE may not apply the large-text exception consistently.
+
+3. **Headerlink `¶` anchors:** Material applies `opacity: 0` to `.headerlink` by default. WAVE evaluates opacity-0 elements and uses their CSS `color` value without the opacity reduction (or computes effective color as near-white), flagging the color as insufficient. These links are decorative — the heading `id` is the actual anchor target.
+
+**Fixes:**
+
+| Source | Fix |
+|--------|-----|
+| Hero section | Added `background-color: rgba(0,0,0,0.65)` to `.hero-content`. WAVE can compute: white `#fff` on this dark bg ≈ **10:1**; `rgba(255,255,255,0.9)` ≈ **9.3:1**. Visually unnoticeable since the actual background is already dark (photo + gradient). |
+| h1 color | Added `.md-typeset h1 { color: var(--md-default-fg-color) }` override. `--md-default-fg-color` = `rgba(0,0,0,0.87)` ≈ **15:1** against white. |
+| Headerlinks | Added `aria-hidden="true"` + `tabindex="-1"` to all `.md-typeset .headerlink` elements via `a11y.js`. The `¶` is decorative; WAVE skips contrast checks for `aria-hidden` elements. Also improves screen reader experience (screen readers no longer announce "¶" for every heading). |
+
+**Files modified:**
+
+| File | Change |
+|------|--------|
+| `docs/stylesheets/extra.css` | Added `background-color: rgba(0,0,0,0.65)` to `.hero-content`; added `.md-typeset h1 { color: var(--md-default-fg-color) }` |
+| `docs/assets/js/a11y.js` | Added loop to set `aria-hidden="true"` + `tabindex="-1"` on all `.md-typeset .headerlink` elements |
+
+---
+
 ### Summary of All Files Changed
 
 ```
@@ -97,7 +126,7 @@ overrides/
     search.html                    # aria-label + onclick on overlay and icon labels
     toc.html                       # md-nav__title __toc: onclick instead of for=
 docs/
-  assets/js/a11y.js                # Runtime fix for md-overlay label
+  assets/js/a11y.js                # md-overlay fix; headerlink aria-hidden
   stylesheets/extra.css            # Contrast fixes + search icon positioning CSS
 mkdocs.yml                         # Registered a11y.js in extra_javascript
 ```
@@ -108,5 +137,6 @@ mkdocs.yml                         # Registered a11y.js in extra_javascript
 |------------|--------|-------|
 | Empty form label | 18 | 0 |
 | Multiple form labels | 21 | 0 |
-| Contrast errors | 9 | 0 |
+| Contrast errors (Phase 3) | 9 | 7 |
+| Contrast errors (Phase 4) | 7 | 0 |
 | **Total** | **48** | **0** |
