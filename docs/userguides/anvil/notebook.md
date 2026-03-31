@@ -19,5 +19,5 @@ draft: true
 
 ## Pegasus on Anvil
 
-Documentation here
-[Pegasus link](http://access-ci.atlassian.net/wiki/spaces/ACCESSdocumentation/pages/564887553/Pegasus+Workflows) 
+Documentation provided by
+[Pegasus](http://access-ci.atlassian.net/wiki/spaces/ACCESSdocumentation/pages/564887553/Pegasus+Workflows) 
