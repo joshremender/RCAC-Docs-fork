@@ -204,7 +204,13 @@ Also updated CSS selector in `extra.css` from `label.md-search__icon` → `.md-s
 
 Updated `docs/assets/js/a11y.js` — the `md-overlay` patch is now a no-op fallback for stale cached builds only.
 
-**Remaining alerts (4):** 1 orphaned form label, 1 missing fieldset, 1 redundant link, 1 device-dependent event handler — to be addressed next.
+#### Remaining 4 alerts (resolved)
+
+| Alert | Element | Fix |
+|-------|---------|-----|
+| Orphaned form label + Device-dependent event handler | `<label class="md-nav__title" onclick="…__toc…">` in `toc.html` | → `<div role="button" tabindex="0">` + `onkeydown` |
+| Missing fieldset | Palette radio group (`name="__palette"`) in `palette.html` | Wrapped inputs in `<fieldset>` with visually-hidden `<legend>Color scheme</legend>` (`.md-sr-only` utility class added to `extra.css`) |
+| Redundant link | `<a class="md-nav__button md-logo" href=".">` in nav drawer (`nav.html`) | Added `aria-hidden="true"` + `tabindex="-1"` — header logo is the primary home link; nav drawer logo is decorative |
 
 ---
 

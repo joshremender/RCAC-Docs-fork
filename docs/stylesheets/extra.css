@@ -23,6 +23,19 @@
   font-weight: bold;
 }
 
+/* Visually hidden but available to screen readers */
+.md-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* Home page: all content links bold + underlined */
 .home-page a {
   font-weight: bold;
