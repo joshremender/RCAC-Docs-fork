@@ -23,6 +23,12 @@
   font-weight: bold;
 }
 
+/* Home page: all content links bold + underlined */
+.home-page a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+
 @font-face {
   font-family: "UnitedSans";
   src: url("/assets/fonts/UnitedSans_purdue_2023/UnitedSansSmExMd.otf") format('truetype');

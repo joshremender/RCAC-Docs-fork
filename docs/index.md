@@ -5,10 +5,12 @@ hide:
 #   - navigation
 ---
 
+<div class="home-page" markdown>
+
 # Welcome to RCAC Documentation
 
 !!! Warning "Announcement"
-    **This is a demo site.** You are visiting a demo site designed for testing purposes only. Contents on this website may not reflect production RCAC resources. Check [rcac.purdue.edu](https://www.rcac.purdue.edu) for official information.
+    **This is a demo site.** You are visiting a demo site designed for testing purposes only. Contents on this website may not reflect production RCAC resources. Check <u>**[rcac.purdue.edu](https://www.rcac.purdue.edu)**</u> for official information.
 
 ## :material-rocket-launch: New to RCAC?
 
@@ -22,7 +24,7 @@ Follow these steps to get up and running on RCAC clusters.
 
     Request access to RCAC computing resources through your Purdue career account or an ACCESS account.
 
-    [:octicons-arrow-right-24: Purdue account](https://www.rcac.purdue.edu/account/request) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:octicons-arrow-right-24: ACCESS account](userguides/anvil/access/)
+    <u>**[:octicons-arrow-right-24: Purdue account](https://www.rcac.purdue.edu/account/request)**</u> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:octicons-arrow-right-24: ACCESS account](userguides/anvil/access/)
 
 -   :material-connection:{ .lg .middle } __Connect to a RCAC Cluster__
 
@@ -239,5 +241,7 @@ Follow these steps to get up and running on RCAC clusters.
     Find office hours, phone numbers, and other ways to connect with the RCAC support team.
 
     [:octicons-arrow-right-24: Full contact info](https://www.rcac.purdue.edu/about/contact)
+
+</div>
 
 </div>
