@@ -113,6 +113,43 @@ Date: 2026-03-31
 
 ---
 
+### Phase 5 — Dark Mode Contrast Errors (SC 1.4.3)
+
+**Problem:** WAVE reported **2 contrast errors in dark mode** that light-mode fixes did not cover.
+
+**Root cause (two sources):**
+
+1. **Header title "RCAC Documentation" (1 error):** `--md-primary-fg-color` is used by Material as the **header background color**. In dark mode we set `--md-primary-fg-color: #CBBA94` (Purdue gold), which correctly makes the header gold. However, `--md-primary-bg-color` (the header text color) was not set, so it defaulted to `#fff` (white). White text on gold (#CBBA94) = **1.9:1** — fails 4.5:1. Fix: add `--md-primary-bg-color: #000000`; black on gold = **11.2:1**.
+
+2. **Warning admonition (1 error):** The admonition fix in Phase 3 used `#b45000` for all modes. `#b45000` on the dark slate background = **2.6:1** — fails. Fix: add a `[data-md-color-scheme="slate"]` override restoring `#ff9100` (original orange), which passes at **5.9:1** on dark backgrounds.
+
+**Contrast ratios:**
+
+| Element | Mode | Old color | Old ratio | New color | New ratio |
+|---------|------|-----------|-----------|-----------|-----------|
+| Header text (`--md-primary-bg-color`) | Dark | `#ffffff` | 1.9:1 | `#000000` | **11.2:1** |
+| Warning admonition | Dark | `#b45000` | 2.6:1 | `#ff9100` | **5.9:1** |
+
+**Files modified:**
+
+| File | Change |
+|------|--------|
+| `docs/stylesheets/extra.css` | Added `--md-primary-bg-color: #000000` to dark mode block; added `[data-md-color-scheme="slate"]` overrides for warning admonition restoring `#ff9100` |
+
+**Commits:** `99f10ec` (warning admonition dark mode), `f673bf9` (header title dark mode)
+
+---
+
+### Visual Improvements (Post-WCAG)
+
+After the WCAG fixes, two visual regressions were corrected:
+
+1. **Hero image too dark:** The `background-color: rgba(0,0,0,0.65)` added to `.hero-content` stacked on top of the existing `.hero-gradient` (max `rgba(0,0,0,0.85)`), making the hero nearly black. Fix: lightened the gradient to `0→0.1→0.2`, so the compounded darkness is ~0.68 (vs ~0.94 before, and ~0.85 original).
+
+2. **Warning admonition color too dark:** `#8b4a00` (WCAG Phase 3 fix) looked like a muddy brown rather than a recognizable warning orange. Replaced with `#b45000` (burnt orange, ~5.0:1 in light mode) — visually orange while still passing WCAG.
+
+---
+
 ### Summary of All Files Changed
 
 ```
@@ -137,6 +174,7 @@ mkdocs.yml                         # Registered a11y.js in extra_javascript
 |------------|--------|-------|
 | Empty form label | 18 | 0 |
 | Multiple form labels | 21 | 0 |
-| Contrast errors (Phase 3) | 9 | 7 |
-| Contrast errors (Phase 4) | 7 | 0 |
-| **Total** | **48** | **0** |
+| Contrast errors — light mode (Phase 3) | 9 | 7 |
+| Contrast errors — light mode (Phase 4) | 7 | 0 |
+| Contrast errors — dark mode (Phase 5) | 2 | 0 |
+| **Total** | **50** | **0** |
