@@ -172,4 +172,155 @@ acl = private
 
 ## s3cmd
 
+[`s3cmd`](https://s3tools.org/s3cmd) is a command-line tool for interacting with S3-compatible object storage. On Anvil, it can be used to manage buckets and transfer data to and from object storage.
+
+> ⚠️ **Note:** Unlike `rclone`, which supports multiple named remotes, `s3cmd` relies on a single configuration file (`~/.s3cfg`) and is generally limited to one endpoint at a time. To work with multiple endpoints, separate configuration files must be used (via the `--config` option).
+---
+
+#### 1. Verify `s3cmd` 
+
+Verify installation on the cluster:
+
+```bash
+$ s3cmd --version
+s3cmd version 2.4.0
+```
+
+---
+
+#### 2. Start the configuration
+
+Run:
+
+```bash
+s3cmd --configure
+```
+
+---
+
+#### 3. Enter credentials
+
+Provide the following when prompted: **Access Key** and **Secret Key**. These are provided by the RCAC team when your object storage account is created.
+
+---
+
+#### 4. Set connection parameters
+
+When prompted for endpoint and DNS settings, use:
+
+- **S3 Endpoint:**  
+  s3.anvil.rcac.purdue.edu
+
+- **DNS-style bucket+hostname:**  
+  %(bucket)s.s3.anvil.rcac.purdue.edu
+
+- **Use HTTPS:**  
+  Yes
+
+- **Default region:**  
+  Leave blank
+
+For the remaining configuration prompts, accept the default values unless otherwise specified, then confirm and save the configuration.
+
+After configuration completes, you can check them here:
+
+```bash
+cat ~/.s3cfg
+```
+
+Ensure the following settings:
+
+```ini
+host_base = s3.anvil.rcac.purdue.edu
+host_bucket = %(bucket)s.s3.anvil.rcac.purdue.edu
+use_https = True
+```
+
+> ⚠️ Leave `host_bucket` empty if you want to enforce path-style addressing.
+
+---
+
+### Test the connection
+
+List files in your bucket (the bucket name will be provided by the RCAC team):
+
+```bash
+s3cmd ls s3://bucketname
+```
+
+---
+
+### Common `s3cmd` commands
+
+**List buckets**
+```bash
+s3cmd ls
+```
+
+**List files in a bucket**
+```bash
+s3cmd ls s3://bucketname
+```
+
+**Upload a file**
+```bash
+s3cmd put myfile.txt s3://bucketname/
+```
+
+**Upload a directory**
+```bash
+s3cmd put -r mydir s3://bucketname/
+```
+
+**Download a file**
+```bash
+s3cmd get s3://bucketname/myfile.txt
+```
+
+**Download a directory**
+```bash
+s3cmd get -r s3://bucketname/mydir
+```
+
+**Remove a file**
+```bash
+s3cmd del s3://bucketname/myfile.txt
+```
+
+**Verbose debug**
+```bash
+s3cmd ls s3://bucketname --debug
+```
+---
+
+#### Example configuration file
+
+Location:
+
+```
+~/.s3cfg
+```
+
+Example:
+
+```ini
+[default]
+access_key = YOUR_ACCESS_KEY
+secret_key = YOUR_SECRET_KEY
+host_base = s3.anvil.rcac.purdue.edu
+host_bucket = %(bucket)s.s3.anvil.rcac.purdue.edu
+use_https = True
+```
+
+---
+
+#### Notes
+
+- Keep your credentials secure
+- Access depends on bucket permissions
+- Shared buckets may be accessible without ownership
+
+---
+
+
 ## Python boto3
