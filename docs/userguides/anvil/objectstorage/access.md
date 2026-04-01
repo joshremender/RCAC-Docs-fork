@@ -59,6 +59,27 @@ Connection Parameters:
 - **Endpoint URL:** https://s3.anvil.rcac.purdue.edu
 - **Addressing Style:** Path-style is preferred (e.g., endpoint/bucket/object).
 
+  - **Path-Style**
+
+    In path-style addressing, the bucket name is part of the URL path:
+
+    ```
+    https://s3.anvil.rcac.purdue.edu/bucket-name/object-key
+    ```
+
+    **Example:** `https://s3.anvil.rcac.purdue.edu/ai-datasets/COCO/file`
+
+  - **DNS-Style (Virtual Hosted Style)**
+
+    In DNS-style addressing, the bucket name is part of the hostname:
+
+    ```
+    https://bucket-name.s3.anvil.rcac.purdue.edu/object-key
+    ```
+
+    **Example:** `https://ai-datasets.s3.anvil.rcac.purdue.edu/COCO/file`
+
+
 !!! note
     Check the user tool documentation for instructions on how to connect using tools such as `rclone`, `s3cmd`, and others.
 ---

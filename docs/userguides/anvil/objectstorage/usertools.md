@@ -15,6 +15,161 @@ draft: false
 
 ## Rclone
 
+[`rclone`](https://rclone.org/) is a command-line tool for interacting with cloud and object storage systems. On Anvil, it can be used to connect to the S3-compatible object storage service and manage buckets and files.
+
+---
+
+#### 1. Load the `rclone` module
+
+First, load the `rclone` module on Anvil:
+
+```bash
+module load rclone
+```
+
+Verify installation:
+
+```bash
+$ rclone version
+rclone v1.70.3 
+```
+
+---
+
+#### 2. Start the `rclone` configuration
+
+Run the configuration and create a new remote:
+
+```bash
+rclone config
+```
+ 
+Inside the interactive menu:
+- Type `n` to create a new remote
+- Enter a name (example):
+
+```
+anvil-s3
+```
+
+---
+
+#### 3. Select storage type
+
+When prompted for the storage type, choose:
+
+```
+s3 
+```
+Then, when asked for the provider, select:
+
+```
+Ceph Object Storage \ (Ceph)
+```
+
+---
+
+#### 4. Enter credentials
+
+Provide **Access Key ID** and **Secret Access Key** These are provided by RCAC team when your object storage account is created.
+
+---
+
+#### 5. Set connection parameters
+
+Use:
+
+- **Endpoint URL:** https://s3.anvil.rcac.purdue.edu
+- **Region:** leave blank (unless provided)
+- **Location constraint:** leave blank
+
+For the remaining configuration prompts, accept the default values unless otherwise specified, then confirm and save the configuration.
+
+---
+
+### Test the connection
+
+List files in your bucket (the bucket name will be provided by the RCAC team):
+
+```bash
+rclone ls anvil-s3:bucketname
+```
+
+---
+
+### Common `rclone` commands
+
+**Show config**
+```bash
+rclone config show
+```
+
+**List files in a bucket**
+```bash
+rclone ls anvil-s3:bucketname
+```
+
+**List directories in a bucket**
+```bash
+rclone lsd anvil-s3:bucketname
+```
+
+**Upload a file**
+```bash
+rclone copy myfile.txt anvil-s3:bucketname
+```
+
+**Upload a directory**
+```bash
+rclone copy mydir anvil-s3:bucketname/mydir
+```
+
+**Download data**
+```bash
+rclone copy anvil-s3:bucketname/mydir ./mydir
+```
+
+**sync directories**
+```bash
+rclone sync mydir anvil-s3:bucketname/mydir
+```
+
+> ⚠️ `sync` will delete files at the destination that do not exist in the source.
+
+---
+
+#### Example configuration file
+
+Location:
+
+```
+~/.config/rclone/rclone.conf
+```
+
+Example:
+
+```ini
+[anvil-s3]
+type = s3
+provider = Ceph
+env_auth = true
+access_key_id = YOUR_ACCESS_KEY
+secret_access_key = YOUR_SECRET_KEY
+endpoint = https://s3.anvil.rcac.purdue.edu
+force_path_style = true
+acl = private
+```
+
+---
+
+#### Notes
+
+- Keep your credentials secure
+- Access depends on bucket permissions
+- Shared buckets may be accessible without ownership
+
+---
+
 ## s3cmd
 
 ## Python boto3
