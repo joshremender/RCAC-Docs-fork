@@ -176,17 +176,50 @@ Previously applied explicit `<u>**...**</u>` markup on two links was also remove
 
 ---
 
+### Phase 7 — WAVE Alerts: Suspicious Alt Text + Orphaned Form Labels (SC 1.1.1, SC 1.3.1)
+
+**Problem:** WAVE reported **52 alerts** including suspicious alt text, orphaned form labels, missing fieldset, redundant link, and device-dependent event handlers.
+
+#### Suspicious alt text (2 alerts → 0)
+
+| Element | Issue | Fix |
+|---------|-------|-----|
+| `<img src="assets/purdue.png" alt="logo">` inside header logo `<a>` | `"logo"` is a generic/suspicious alt value | Changed to `alt=""` — the enclosing `<a>` already has `aria-label="RCAC Documentation"`, making the image decorative |
+
+**File:** Created `overrides/partials/logo.html` overriding Material's default which hard-codes `alt="logo"`.
+
+#### Orphaned form labels (partial — in progress)
+
+Material uses `<label>` elements as CSS-toggle click targets (no `for=` after our Phase 1/2 fixes). WAVE flags these as orphaned. Fix: replace each with `<div role="button" tabindex="0">` and add `onkeydown` for keyboard support (also fixes device-dependent event handler alerts).
+
+| Element | File | Fix |
+|---------|------|-----|
+| `<label class="md-overlay">` | `overrides/base.html` | → `<div role="button" tabindex="0">` + `onkeydown` |
+| `<label class="md-search__overlay">` | `overrides/partials/search.html` | → `<div role="button" tabindex="0">` + `onkeydown` |
+| `<label class="md-search__icon">` | `overrides/partials/search.html` | → `<div role="button" tabindex="0">` + `onkeydown` |
+| `<label class="md-nav__title" onclick="…__drawer…">` | `overrides/partials/nav.html` | → `<div role="button" tabindex="0">` + `onkeydown` |
+| `<label class="md-nav__title" onclick="…path…">` | `overrides/partials/nav-item.html` | → `<div role="button" tabindex="0">` + `onkeydown` |
+
+Also updated CSS selector in `extra.css` from `label.md-search__icon` → `.md-search__icon` to preserve search icon positioning after the element type change.
+
+Updated `docs/assets/js/a11y.js` — the `md-overlay` patch is now a no-op fallback for stale cached builds only.
+
+**Remaining alerts (4):** 1 orphaned form label, 1 missing fieldset, 1 redundant link, 1 device-dependent event handler — to be addressed next.
+
+---
+
 ### Summary of All Files Changed
 
 ```
 overrides/
-  base.html                        # md-overlay: removed for=, added onclick
+  base.html                        # md-overlay: label→div + onkeydown
   partials/
     header.html                    # aria-label on __drawer and __search labels
-    nav-item.html                  # aria-label on expand labels; md-nav__title onclick
-    nav.html                       # md-nav__title __drawer: onclick instead of for=
+    logo.html                      # alt="" on logo image (was alt="logo")
+    nav-item.html                  # aria-label on expand labels; md-nav__title label→div
+    nav.html                       # md-nav__title __drawer: label→div + onkeydown
     palette.html                   # aria-label on palette toggle labels
-    search.html                    # aria-label + onclick on overlay and icon labels
+    search.html                    # overlay + icon: label→div + onkeydown
     toc.html                       # md-nav__title __toc: onclick instead of for=
 docs/
   index.md                         # Home page link styling via .home-page wrapper div

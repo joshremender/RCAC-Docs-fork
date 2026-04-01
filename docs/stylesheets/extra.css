@@ -458,24 +458,24 @@ th, td {
    to fix WCAG "multiple form labels" error. The Material CSS positions
    .md-search__icon via [for=__search] attribute selectors; we replicate
    those rules here using a structural selector instead. */
-.md-search__form > label.md-search__icon {
+.md-search__form > .md-search__icon {
   position: absolute;
   top: .3rem;
   z-index: 2;
 }
-[dir=ltr] .md-search__form > label.md-search__icon { left: .5rem; }
-[dir=rtl] .md-search__form > label.md-search__icon { right: .5rem; }
-[dir=rtl] .md-search__form > label.md-search__icon svg { transform: scaleX(-1); }
+[dir=ltr] .md-search__form > .md-search__icon { left: .5rem; }
+[dir=rtl] .md-search__form > .md-search__icon { right: .5rem; }
+[dir=rtl] .md-search__form > .md-search__icon svg { transform: scaleX(-1); }
 
 @media screen and (max-width: 59.984375em) {
-  [dir=ltr] .md-search__form > label.md-search__icon { left: .8rem; }
-  [dir=rtl] .md-search__form > label.md-search__icon { right: .8rem; }
-  .md-search__form > label.md-search__icon { top: .6rem; }
-  .md-search__form > label.md-search__icon svg:first-child { display: none; }
+  [dir=ltr] .md-search__form > .md-search__icon { left: .8rem; }
+  [dir=rtl] .md-search__form > .md-search__icon { right: .8rem; }
+  .md-search__form > .md-search__icon { top: .6rem; }
+  .md-search__form > .md-search__icon svg:first-child { display: none; }
 }
 
 @media screen and (min-width: 60em) {
-  .md-search__form > label.md-search__icon { pointer-events: none; }
-  .md-search__form > label.md-search__icon svg:last-child { display: none; }
+  .md-search__form > .md-search__icon { pointer-events: none; }
+  .md-search__form > .md-search__icon svg:last-child { display: none; }
 }
 

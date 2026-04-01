@@ -111,10 +111,10 @@
           </div>
         {% endif %}
         <nav class="md-nav" data-md-level="{{ level }}" aria-labelledby="{{ path }}_label" aria-expanded="{{ nav_item.active | tojson }}">
-          <label class="md-nav__title" onclick="var t=document.getElementById('{{ path }}');if(t)t.checked=false;">
+          <div class="md-nav__title" role="button" tabindex="0" onclick="var t=document.getElementById('{{ path }}');if(t)t.checked=false;" onkeydown="if(event.key==='Enter'||event.key===' '){var t=document.getElementById('{{ path }}');if(t)t.checked=false;}">
             <span class="md-nav__icon md-icon"></span>
             {{ nav_item.title }}
-          </label>
+          </div>
           <ul class="md-nav__list" data-md-scrollfix>
             {% for item in nav_item.children %}
               {% if not index or item != index %}
