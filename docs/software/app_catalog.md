@@ -9,7 +9,7 @@ hide:
 # All software and versions on RCAC clusters
 
 ## Overview
-As of **February 10, 2026**, there have been a total of **272** applications with **2474** available versions deployed across **6** RCAC HPC clusters: **ANVIL, BELL, GAUTSCHI, GILBRETH, NEGISHI, SCHOLAR**.
+As of **March 28, 2026**, there have been a total of **274** applications with **2508** available versions deployed across **6** RCAC HPC clusters: **ANVIL, BELL, GAUTSCHI, GILBRETH, NEGISHI, SCHOLAR**.
 
 ## Applications Catalog
 
@@ -431,7 +431,7 @@ As of **February 10, 2026**, there have been a total of **272** applications wit
     <tr>
       <td><a href="../apps_md/gurobi"><strong>gurobi</strong></a></td>
       <td>Math/Stat, Engineering</td>
-      <td>ANVIL, BELL, GAUTSCHI, NEGISHI, SCHOLAR</td>
+      <td>ANVIL, BELL, GAUTSCHI, GILBRETH, NEGISHI, SCHOLAR</td>
     </tr>
     <tr>
       <td><a href="../apps_md/hadoop"><strong>hadoop</strong></a></td>
@@ -542,6 +542,11 @@ As of **February 10, 2026**, there have been a total of **272** applications wit
       <td><a href="../apps_md/intel"><strong>intel</strong></a></td>
       <td>Compilers</td>
       <td>ANVIL, BELL, GAUTSCHI, NEGISHI, SCHOLAR</td>
+    </tr>
+    <tr>
+      <td><a href="../apps_md/java"><strong>java</strong></a></td>
+      <td>Miscellaneous</td>
+      <td>GILBRETH</td>
     </tr>
     <tr>
       <td><a href="../apps_md/julia"><strong>julia</strong></a></td>
@@ -1082,6 +1087,11 @@ As of **February 10, 2026**, there have been a total of **272** applications wit
       <td><a href="../apps_md/r"><strong>r</strong></a></td>
       <td>Math/Stat, Programming</td>
       <td>ANVIL, BELL, GAUTSCHI, GILBRETH, NEGISHI, SCHOLAR</td>
+    </tr>
+    <tr>
+      <td><a href="../apps_md/rclone"><strong>rclone</strong></a></td>
+      <td>Miscellaneous</td>
+      <td>ANVIL, BELL, GAUTSCHI, GILBRETH, NEGISHI</td>
     </tr>
     <tr>
       <td><a href="../apps_md/readline"><strong>readline</strong></a></td>

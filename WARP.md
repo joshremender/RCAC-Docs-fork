@@ -3,7 +3,16 @@
 ## Project Overview
 This is the MkDocs-based documentation website for the **Rosen Center for Advanced Computing (RCAC)** at Purdue University. It provides comprehensive user guides, tutorials, reference material, software catalogs, datasets, blog articles, and workshop materials for RCAC's HPC systems (Anvil and Gautschi).
 
-**Primary URL**: https://rcac-docs-demo.readthedocs.io
+**Primary URL**: https://rcac-docs.s3-hosted.rcac.purdue.edu
+**Source Repository**: https://github.com/PurdueRCAC/RCAC-Docs
+
+### Reference Sites
+The following HPC documentation sites use a similar MkDocs Material framework and serve as design/content references:
+- https://docs.tacc.utexas.edu/
+- https://docs.alcf.anl.gov/
+- https://docs.ncsa.illinois.edu/en/latest/
+- https://docs.jetstream-cloud.org/
+- https://docs.hpc.ucdavis.edu/
 
 ## Repository Structure
 

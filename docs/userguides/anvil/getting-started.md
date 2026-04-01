@@ -64,7 +64,7 @@ By default, you will have access to three different storage locations:
 - **$PROJECT:** 5TB of space (can request more)
 - **$SCRATCH:** 100TB of storage with a 1 million file limit.
 
-See [File Management](storage.md) for more information.
+See [File Management](file_management.md) for more information.
 
 !!! tip "Storage etiquette"
     We advice not to add virtual environments or any big files to your $HOME directory. Virtual environments can exceed the disk quota limit of home quickly and are often better off stored at your $PROJECT space.
