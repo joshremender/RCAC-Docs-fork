@@ -150,6 +150,32 @@ After the WCAG fixes, two visual regressions were corrected:
 
 ---
 
+### Phase 6 — Home Page Link Styling
+
+**Change:** All links on the home page (`docs/index.md`) are now **bold and underlined**.
+
+**Implementation:** Rather than marking up each link individually with `<u>**[...](...)**</u>`, the page content is wrapped in `<div class="home-page" markdown>` and a single CSS rule handles the styling:
+
+```css
+.home-page a {
+  font-weight: bold;
+  text-decoration: underline;
+}
+```
+
+Previously applied explicit `<u>**...**</u>` markup on two links was also removed as redundant.
+
+**Files modified:**
+
+| File | Change |
+|------|--------|
+| `docs/index.md` | Wrapped content in `<div class="home-page" markdown>`; removed explicit `<u>**...**</u>` from 2 links |
+| `docs/stylesheets/extra.css` | Added `.home-page a { font-weight: bold; text-decoration: underline }` |
+
+**Commits:** `2577fc4`, `251f189`
+
+---
+
 ### Summary of All Files Changed
 
 ```
@@ -163,8 +189,9 @@ overrides/
     search.html                    # aria-label + onclick on overlay and icon labels
     toc.html                       # md-nav__title __toc: onclick instead of for=
 docs/
+  index.md                         # Home page link styling via .home-page wrapper div
   assets/js/a11y.js                # md-overlay fix; headerlink aria-hidden
-  stylesheets/extra.css            # Contrast fixes + search icon positioning CSS
+  stylesheets/extra.css            # Contrast fixes, search icon CSS, home link styling
 mkdocs.yml                         # Registered a11y.js in extra_javascript
 ```
 
