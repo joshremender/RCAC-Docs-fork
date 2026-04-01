@@ -11,10 +11,9 @@
 
 /* Dark mode */
 [data-md-color-scheme="slate"][data-md-color-primary] {
-  /* --md-default-fg-color: #CBBA94;  */
-  /* --md-default-bg-color: #CBBA94; */
   --md-typeset-a-color: #ebd99f;
-  --md-primary-fg-color: #CBBA94;
+  --md-primary-fg-color: #CBBA94;    /* header background = Purdue gold */
+  --md-primary-bg-color: #000000;    /* header text = black on gold — 11.2:1 (was white = 1.9:1) */
   /* #8e6f3e is 3.65:1 on dark bg — fails 4.5:1 for text. Use light gold. */
   --md-accent-fg-color: #ebd99f;
   --md-accent-fg-color--transparent: rgba(235, 217, 159, 0.1);
