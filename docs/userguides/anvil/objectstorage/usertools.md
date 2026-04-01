@@ -174,8 +174,7 @@ acl = private
 
 [`s3cmd`](https://s3tools.org/s3cmd) is a command-line tool for interacting with S3-compatible object storage. On Anvil, it can be used to manage buckets and transfer data to and from object storage.
 
-> ⚠️ **Note:** Unlike `rclone`, `s3cmd` uses a single configuration file (`~/.s3cfg`) and is typically tied to one endpoint at a time. If you need to work with multiple endpoints, you must use separate config files (via `--config`) or reconfigure `s3cmd`.
-
+> ⚠️ **Note:** Unlike `rclone`, which supports multiple named remotes, `s3cmd` relies on a single configuration file (`~/.s3cfg`) and is generally limited to one endpoint at a time. To work with multiple endpoints, separate configuration files must be used (via the `--config` option).
 ---
 
 #### 1. Verify `s3cmd` 
