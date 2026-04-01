@@ -11,9 +11,9 @@
 {% endif %}
 <nav class="{{ class }}" aria-label="{{ lang.t('nav') }}" data-md-level="0">
   <div class="md-nav__title" role="button" tabindex="0" onclick="var t=document.getElementById('__drawer');if(t)t.checked=false;" onkeydown="if(event.key==='Enter'||event.key===' '){var t=document.getElementById('__drawer');if(t)t.checked=false;}">
-    <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" title="{{ config.site_name | e }}" class="md-nav__button md-logo" aria-hidden="true" tabindex="-1" data-md-component="logo">
+    <span class="md-nav__button md-logo" aria-hidden="true" data-md-component="logo">
       {% include "partials/logo.html" %}
-    </a>
+    </span>
     {{ config.site_name }}
   </div>
   {% if config.repo_url %}
