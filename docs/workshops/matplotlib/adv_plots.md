@@ -233,4 +233,4 @@ plt.savefig('FigureName.png')
 
 Simply replace the `plt.show()` in the script with the `plt.savefig()` function and it will save the file to the same directory the script is in. It supports many options as well as many file types, but for now, saving as a PNG is sufficient for our needs.
 
-In the next section, we will discuss different types of plots and how to use them: [Next section](./plot_types.md)
+In the [next section](plot_types.md), we will discuss different types of plots and how to use them.
