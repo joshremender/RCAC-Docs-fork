@@ -1,5 +1,5 @@
 # Getting Started with Python and MatPlotLib
-[Back to main index](../index.md)
+[Back to main index](index.md)
 
 ## Introduction
 
