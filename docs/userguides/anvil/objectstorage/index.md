@@ -19,5 +19,4 @@ This documentation provides an introduction to Anvil Object Storage, a high-perf
 - [**Object Storage Concepts**](concepts.md)
 - [**Getting Access and Connecting to Object Storage**](access.md)
 - [**User Tools**](usertools.md)
-<!-- - [**Best Practices**](index.md) -->
 - [**Security and Access Control**](acl.md)

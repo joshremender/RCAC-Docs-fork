@@ -162,19 +162,11 @@ acl = private
 
 ---
 
-#### Notes
-
-- Keep your credentials secure
-- Access depends on bucket permissions
-- Shared buckets may be accessible without ownership
-
----
-
 ## s3cmd
 
 [`s3cmd`](https://s3tools.org/s3cmd) is a command-line tool for interacting with S3-compatible object storage. On Anvil, it can be used to manage buckets and transfer data to and from object storage.
 
-> ⚠️ **Note:** Unlike `rclone`, which supports multiple named remotes, `s3cmd` relies on a single configuration file (`~/.s3cfg`) and is generally limited to one endpoint at a time. To work with multiple endpoints, separate configuration files must be used (via the `--config` option).
+!!! **Note:** Unlike `rclone`, which supports multiple named remotes, `s3cmd` relies on a single configuration file (`~/.s3cfg`) and is generally limited to one endpoint at a time. To work with multiple endpoints, separate configuration files must be used (via the `--config` option).
 
 ---
 
@@ -237,7 +229,7 @@ host_bucket = %(bucket)s.s3.anvil.rcac.purdue.edu
 use_https = True
 ```
 
-> ⚠️ Leave `host_bucket` empty if you want to enforce path-style addressing.
+!!! Leave `host_bucket` empty if you want to enforce path-style addressing.
 
 ---
 
@@ -313,15 +305,154 @@ host_bucket = %(bucket)s.s3.anvil.rcac.purdue.edu
 use_https = True
 ```
 
+## Python boto3
+
+[`boto3`](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html) is the official AWS SDK for Python. It can also be used with S3-compatible object storage such as Anvil’s Ceph-based storage by specifying a custom endpoint.
+
 ---
 
-#### Notes
+#### 1. Load Conda module and create your environment
+
+On Anvil, load conda module or activate your environment:
+
+```bash
+
+module load conda
+conda create -n boto3 python=3.12
+conda activate boto3
+pip install boto3
+
+```
+
+---
+
+#### 2. Configure credentials
+
+You can provide credentials in two ways:
+
+##### Environment variables
+
+```bash
+export AWS_ACCESS_KEY_ID=YOUR_ACCESS_KEY
+export AWS_SECRET_ACCESS_KEY=YOUR_SECRET_KEY
+```
+
+Then in Python: 
+
+```python
+import boto3
+
+# Create S3 client (credentials picked up automatically from environment)
+s3 = boto3.client(
+    "s3",
+    endpoint_url="https://s3.anvil.rcac.purdue.edu"
+)
+```
+
+##### Directly in code
+
+```python
+import boto3
+
+s3 = boto3.client(
+    "s3",
+    endpoint_url="https://s3.anvil.rcac.purdue.edu",
+    aws_access_key_id="YOUR_ACCESS_KEY",
+    aws_secret_access_key="YOUR_SECRET_KEY"
+)
+```
+
+---
+
+#### 3. Test the connection
+
+List available buckets:
+
+```python
+response = s3.list_buckets()
+
+for bucket in response["Buckets"]:
+    print(bucket["Name"])
+```
+
+---
+
+#### 4. Access your bucket
+
+List files in your bucket (the bucket name will be provided by the RCAC team):
+
+```python
+bucket_name = "bucketname"
+
+response = s3.list_objects_v2(Bucket=bucket_name)
+
+for obj in response.get("Contents", []):
+    print(obj["Key"])
+```
+
+---
+
+#### Common `boto3` operations
+
+**Upload a file**
+
+```python
+s3.upload_file("myfile.txt", "bucketname", "myfile.txt")
+```
+
+---
+
+**Download a file**
+
+```python
+s3.download_file("bucketname", "myfile.txt", "myfile.txt")
+```
+
+---
+
+**Upload a directory**
+
+```python
+import os
+
+for root, dirs, files in os.walk("mydir"):
+    for file in files:
+        local_path = os.path.join(root, file)
+        s3_path = os.path.relpath(local_path, "mydir")
+        s3.upload_file(local_path, "bucketname", s3_path)
+```
+
+---
+
+**Delete a file**
+
+```python
+s3.delete_object(Bucket="bucketname", Key="myfile.txt")
+```
+
+---
+
+**Advanced: Use a custom session**
+
+```python
+session = boto3.session.Session()
+
+s3 = session.client(
+    "s3",
+    endpoint_url="https://s3.anvil.rcac.purdue.edu"
+)
+```
+
+**Advanced: Streaming file (no download)**
+
+```python
+obj = s3.get_object(Bucket="bucketname", Key="data/file.txt")
+data = obj["Body"].read()
+```
+## Notes
 
 - Keep your credentials secure
 - Access depends on bucket permissions
 - Shared buckets may be accessible without ownership
 
 ---
-
-
-## Python boto3
