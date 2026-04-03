@@ -71,7 +71,7 @@ ax.bar(names, values);
 
 plt.show()
 ```
-![TODO](./_static/Simple_bar.png "Simple Bar Chart")
+![An image showing a bar chart, with x-axis labels of Apple, Orange, Lemon, and Lime.](./_static/Simple_bar.png "Simple Bar Chart")
 
 ```
 import numpy as np
@@ -88,7 +88,7 @@ ax.barh(names, values);
 
 plt.show()
 ```
-![TODO](./_static/Horiz_bar.png "Horizontal Bar Chart")
+![An image showing a horizontal bar chart, with y-axis labels of Apple, Orange, Lemon, and Lime.](./_static/Horiz_bar.png "Horizontal Bar Chart")
 
 ```
 import numpy as np
@@ -101,14 +101,14 @@ x = np.arange(len(men_means))
 width = 0.25
 
 fig, ax = plt.subplots()
-rects1 = ax.bar(x - width/2, men_means, width, label='Men')
-rects2 = ax.bar(x + width/2, women_means, width, label='Women')
+ax.bar(x - width/2, men_means, width, label='Men')
+ax.bar(x + width/2, women_means, width, label='Women')
 
 ax.legend()
 
 plt.show()
 ```
-![TODO](./_static/Group_bar.png "Grouped Bar Chart")
+![An image showing a grouped bar chart with five groups of bars, each with one blue and one orange bar, with blue being labeled "Men" and orange labeled "Women".](./_static/Group_bar.png "Grouped Bar Chart")
 
 ## Fill Between
 
@@ -130,7 +130,7 @@ ax.plot(x, (y1 + y2)/2, linewidth=2)
 
 plt.show()
 ```
-![TODO](./_static/Fill_between.png "Fill Between Plot")
+![An image showing a plot with an area that is filled, with a line in the middle of the area.](./_static/Fill_between.png "Fill Between Plot")
 
 ## Histograms
 
@@ -148,7 +148,7 @@ ax.hist(x, bins=20, linewidth=0.25, edgecolor="white")
 
 plt.show()
 ```
-![TODO](./_static/Histogram.png "Histogram")
+![An image showing a histogram that contains a roughly normal distribution of numbers centered around 4.](./_static/Histogram.png "Histogram")
 
 ## Error Bars
 
@@ -168,7 +168,7 @@ ax.errorbar(x,y,yerr, fmt='o', linewidth=2, capsize=6)
 
 plt.show()
 ```
-![TODO](./_static/Error_bars.png "Plot with Error Bars")
+![An image showing a plot that has points forming a sinusoidal line, with error bars in the y-direction on each point of varying sizes.](./_static/Error_bars.png "Plot with Error Bars")
 
 ## 2-D Pixel Maps
 
@@ -187,7 +187,7 @@ ax.imshow(Z, origin='lower')
 
 plt.show()
 ```
-![TODO](./_static/Imshow_plot.png "Imshow Plot")
+![An image showing a heat map of data that goes from dark blue to yellow. The x- and y-axes range from 0 to 17.5.](./_static/Imshow_plot.png "Imshow Plot")
 
 ```
 import matplotlib.pyplot as plt
@@ -207,7 +207,7 @@ ax.pcolormesh(X,Y,Z)
 
 plt.show()
 ```
-![TODO](./_static/Pcolormesh_plot.png "Pcolormesh Plot")
+![An image showing a heat map of data that goes from dark blue to yellow. The x- and y-axes range from negative four to four.](./_static/Pcolormesh_plot.png "Pcolormesh Plot")
 
 ## Contour Plots
 
@@ -228,7 +228,7 @@ ax.contour(X,Y,Z, levels=levels)
 
 plt.show()
 ```
-![TODO](./_static/Contour_plot.png "Contour Plot")
+![An image showing a contour plot that goes from dark blue at lowest to yellow at highest.](./_static/Contour_plot.png "Contour Plot")
 
 ```
 import matplotlib.pyplot as plt
@@ -247,7 +247,7 @@ ax.contourf(X,Y,Z, levels=levels)
 
 plt.show()
 ```
-![TODO](./_static/Contourf_plot.png "Filled Contour Plot")
+![An image showing a filled contour plot that goes from dark blue at lowest to yellow at highest.](./_static/Contourf_plot.png "Filled Contour Plot")
 
 ## Quiver Plots
 
@@ -267,7 +267,7 @@ ax.quiver(X,Y,U,V)
 
 plt.show()
 ```
-![TODO](./_static/Quiver_plot.png "Quiver Plot")
+![An image showing a quiver plot with arrows that point away from the x- and y-axes.](./_static/Quiver_plot.png "Quiver Plot")
 
 ## Stream Plots
 
@@ -287,7 +287,7 @@ ax.streamplot(X,Y,U,V)
 
 plt.show()
 ```
-![TODO](./_static/Stream_plot.png "Stream Plot")
+![An image showing a stream plot with long arrows that point initially away from the center in the x-direction and then bend away from the x-axis in the y-direction.](./_static/Stream_plot.png "Stream Plot")
 
 ## Irregular Contour Plots
 
@@ -311,6 +311,6 @@ ax.tricontour(x,y,z, levels=levels)
 
 plt.show()
 ```
-![TODO](./_static/Tricontour_plot.png "Irregular Contour Plot")
+![An image showing a contour plot that goes from dark blue at lowest to yellow at highest. The contour plot is overlaid on a scatter plot of data points showing that the data is coming from an irregular grid.](./_static/Tricontour_plot.png "Irregular Contour Plot")
 
 In the next section, we will discuss how to make a time-series of plots into an animation, such as a gif. [Next section](animations.md)
