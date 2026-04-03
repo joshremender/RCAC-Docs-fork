@@ -223,6 +223,8 @@ When we run this from the terminal, it results in a figure that looks like this:
 
 ![An image showing three plotting frames, two on top and one beneath. The top left plot shows a sine wave, the top right has a negative sine wave, and the bottom plot contains a cosine wave.](./_static/Non-uniform_lines.png "Non-Uniform Multi Lines")
 
+Notice that in this one, the titles are for each axes, not for the entire figure. Also, notice that some of the tick labels of the upper right plot overlap the plot in the top left. Try playing with the `fig.add_axes()` numbers until it looks better.
+
 ## Saving Plots
 
 Up to this point, we have been interactively viewing the plots as we generate them. However, when we close out of the window, they are gone forever (until we run the script again). What if we want to save the plots to a file to have a reproducible view of the plot to put into, say, a paper? There's a simple command for that:
