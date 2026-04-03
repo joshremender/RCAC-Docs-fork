@@ -202,8 +202,101 @@ plt.show()
 
 ## Contour Plots
 
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+bound = 5
+
+X, Y = np.meshgrid(np.linspace(-bound, bound, 10*bound), np.linspace(-bound, bound, 10*bound))
+Z = X + Y**2 + np.sin(X*Y) + 1/X
+
+levels = np.linspace(Z.min(),Z.max(),10)
+
+fig, ax = plt.subplots()
+
+ax.contour(X,Y,Z, levels=levels)
+
+plt.show()
+```
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+bound = 5
+
+X, Y = np.meshgrid(np.linspace(-bound, bound, 10*bound), np.linspace(-bound, bound, 10*bound))
+Z = X + Y**2 + np.sin(X*Y) + 1/X
+
+levels = np.linspace(Z.min(),Z.max(),10)
+
+fig, ax = plt.subplots()
+
+ax.contourf(X,Y,Z, levels=levels)
+
+plt.show()
+```
+
 ## Quiver Plots
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+bound = 5
+
+X, Y = np.meshgrid(np.linspace(-bound, bound, 2*bound), np.linspace(-bound, bound, 2*bound))
+U = 1/X
+V = Y
+
+fig, ax = plt.subplots()
+
+ax.quiver(X,Y,U,V)
+
+plt.show()
+```
 
 ## Stream Plots
 
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+bound = 5
+
+X, Y = np.meshgrid(np.linspace(-bound, bound, 2*bound), np.linspace(-bound, bound, 2*bound))
+U = 1/X
+V = Y
+
+fig, ax = plt.subplots()
+
+ax.streamplot(X,Y,U,V)
+
+plt.savefig('figs/Stream_plot.png')
+```
+
 ## Irregular Contour Plots
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+
+bound = 5
+
+rng = np.random.default_rng(seed=25)
+
+x = 2*bound*rng.random(20*bound)-bound
+y = 2*bound*rng.random(20*bound)-bound
+z = x + y**2 + np.sin(x*y) + 1/x
+levels = np.linspace(z.min(), z.max(), 10)
+
+fig, ax = plt.subplots()
+
+ax.scatter(x,y,alpha=0.1)
+ax.tricontour(x,y,z, levels=levels)
+
+plt.show()
+```
+
+In the next section, we will discuss how to make a time-series of plots into an animation, such as a gif. [Next section](animations.md)
