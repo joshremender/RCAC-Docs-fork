@@ -71,6 +71,7 @@ ax.bar(names, values);
 
 plt.show()
 ```
+![TODO](./_static/Simple_bar.png "Simple Bar Chart")
 
 ```
 import numpy as np
@@ -87,6 +88,7 @@ ax.barh(names, values);
 
 plt.show()
 ```
+![TODO](./_static/Horiz_bar.png "Horizontal Bar Chart")
 
 ```
 import numpy as np
@@ -104,9 +106,9 @@ rects2 = ax.bar(x + width/2, women_means, width, label='Women')
 
 ax.legend()
 
-plt.sshow()
-
+plt.show()
 ```
+![TODO](./_static/Group_bar.png "Grouped Bar Chart")
 
 ## Fill Between
 
@@ -128,6 +130,7 @@ ax.plot(x, (y1 + y2)/2, linewidth=2)
 
 plt.show()
 ```
+![TODO](./_static/Fill_between.png "Fill Between Plot")
 
 ## Histograms
 
@@ -145,6 +148,7 @@ ax.hist(x, bins=20, linewidth=0.25, edgecolor="white")
 
 plt.show()
 ```
+![TODO](./_static/Histogram.png "Histogram")
 
 ## Error Bars
 
@@ -161,7 +165,10 @@ yerr = 0.25*rng.random(len(y))
 fig, ax = plt.subplots()
 
 ax.errorbar(x,y,yerr, fmt='o', linewidth=2, capsize=6)
+
+plt.show()
 ```
+![TODO](./_static/Error_bars.png "Plot with Error Bars")
 
 ## 2-D Pixel Maps
 
@@ -180,6 +187,7 @@ ax.imshow(Z, origin='lower')
 
 plt.show()
 ```
+![TODO](./_static/Imshow_plot.png "Imshow Plot")
 
 ```
 import matplotlib.pyplot as plt
@@ -199,6 +207,7 @@ ax.pcolormesh(X,Y,Z)
 
 plt.show()
 ```
+![TODO](./_static/Pcolormesh_plot.png "Pcolormesh Plot")
 
 ## Contour Plots
 
@@ -219,6 +228,7 @@ ax.contour(X,Y,Z, levels=levels)
 
 plt.show()
 ```
+![TODO](./_static/Contour_plot.png "Contour Plot")
 
 ```
 import matplotlib.pyplot as plt
@@ -237,6 +247,7 @@ ax.contourf(X,Y,Z, levels=levels)
 
 plt.show()
 ```
+![TODO](./_static/Contourf_plot.png "Filled Contour Plot")
 
 ## Quiver Plots
 
@@ -256,6 +267,7 @@ ax.quiver(X,Y,U,V)
 
 plt.show()
 ```
+![TODO](./_static/Quiver_plot.png "Quiver Plot")
 
 ## Stream Plots
 
@@ -273,8 +285,9 @@ fig, ax = plt.subplots()
 
 ax.streamplot(X,Y,U,V)
 
-plt.savefig('figs/Stream_plot.png')
+plt.show()
 ```
+![TODO](./_static/Stream_plot.png "Stream Plot")
 
 ## Irregular Contour Plots
 
@@ -298,5 +311,6 @@ ax.tricontour(x,y,z, levels=levels)
 
 plt.show()
 ```
+![TODO](./_static/Tricontour_plot.png "Irregular Contour Plot")
 
 In the next section, we will discuss how to make a time-series of plots into an animation, such as a gif. [Next section](animations.md)
