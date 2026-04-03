@@ -1,7 +1,7 @@
 # Animations
-[Back to main index](index.md)
+[Back to main index](index.md){ .md-button }
 
-[Previous page](plot_types.md)
+[Previous page](plot_types.md){ .md-button .md-button--primary }
 
 ## Introduction
 

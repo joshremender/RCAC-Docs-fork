@@ -1,7 +1,7 @@
 # Types of Plots
-[Back to main index](index.md)
+[Back to main index](index.md){ .md-button }
 
-[Previous page](adv_plots.md)
+[Previous page](adv_plots.md){ .md-button .md-button--primary }
 
 In this section, we will talk about different plot types, as well as how and when to use them.
 
@@ -313,4 +313,6 @@ plt.show()
 ```
 ![An image showing a contour plot that goes from dark blue at lowest to yellow at highest. The contour plot is overlaid on a scatter plot of data points showing that the data is coming from an irregular grid.](./_static/Tricontour_plot.png "Irregular Contour Plot")
 
-In the next section, we will discuss how to make a time-series of plots into an animation, such as a gif. [Next section](animations.md)
+In the next section, we will discuss how to make a time-series of plots into an animation, such as a gif.
+
+[Next section](animations.md){ .md-button .md-button--primary }

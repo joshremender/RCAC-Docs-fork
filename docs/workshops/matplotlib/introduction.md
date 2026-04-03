@@ -1,5 +1,5 @@
 # Getting Started with Python and MatPlotLib
-[Back to main index](index.md)
+[Back to main index](index.md){ .md-button }
 
 ## Introduction
 
@@ -39,4 +39,4 @@ There are two main ways to write code in Python:
 
 In this workshop, we will write scripts and run those scripts. The script is essentially a list of commands you want the computer to run. You could do the same thing interactively and write the program line-by-line every time, but scripts introduce reproducibility to your workflow.
 
-[Next Section](first_script.md)
+[Next Section](first_script.md){ .md-button .md-button--primary }

@@ -1,7 +1,7 @@
 # Our First Script
-[Back to main index](index.md)
+[Back to main index](index.md){ .md-button }
 
-[Previous page](introduction.md)
+[Previous page](introduction.md){ .md-button .md-button--primary }
 
 ## Beginning Python
 

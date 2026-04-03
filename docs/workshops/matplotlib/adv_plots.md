@@ -1,7 +1,7 @@
 # Advanced Plotting
-[Back to main index](index.md)
+[Back to main index](index.md){ .md-button }
 
-[Previous page](sine_plot.md)
+[Previous page](sine_plot.md){ .md-button .md-button--primary }
 
 ## Multiple Lines
 
@@ -237,4 +237,6 @@ Simply replace the `plt.show()` in the script with the `plt.savefig()` function 
 
 Of note, saving a figure does not clear it from memory, so if you save an intermediate figure, you can still plot more on top of it. If you do need to clear a figure of data, use the `plt.clf()` function.
 
-In the next section, we will discuss different types of plots and how to use them: [Next section](plot_types.md)
+In the next section, we will discuss different types of plots and how to use them:
+
+[Next section](plot_types.md){ .md-button .md-button--primary }
