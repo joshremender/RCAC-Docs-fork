@@ -13,7 +13,6 @@ In this series of workshops, we will focus on the MatPlotLib package and its use
 
 - **OS**: This one is used rarely, it interfaces with your operating system to perform some simple tasks
 - **NumPy**: A C-based numeric library to perform quick mathematical operations
-- **Bokeh**: Used only in our interactive plotting session, it creates plots that can be served on the web
 - **ffmpeg** (external): In one example of creating animated figures, we use the external (non-Python) ffmpeg package, which deals with creating and editing videos through the command line
 
 ## Installation
