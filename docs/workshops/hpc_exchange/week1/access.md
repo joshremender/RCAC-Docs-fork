@@ -42,7 +42,7 @@ You're now ready to do things on the cluster!
 ## ThinLinc
 ThinLinc is an alternative we provide if you would like a more familiar GUI-based interface. There are two ways to use ThinLinc: the browser version and the desktop version. The desktop version requires a download, but it has a couple more features that the browser version doesn't have. Specifically, you can use ssh keys as well as restart your session in the desktop version, which you can't do in the browser version.
 
-You can download the desktop ThinLinc client from [Cendio](https://www.cendio.com/thinlinc/download/).
+You can download the desktop ThinLinc client from [Cendio :octicons-link-external-16:](https://www.cendio.com/thinlinc/download/).
 
 Otherwise, if you want to use the browser version, simply open up your favorite internet browser and navigate to `desktop.CLUSTER.rcac.purdue.edu`, where `CLUSTER` is replaced with the name of the cluster you want to access.
 

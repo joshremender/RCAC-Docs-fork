@@ -127,7 +127,7 @@ To use X11, you will need to have a local X11 server running on your personal ma
 **Microsoft Windows:**
 
 - [ThinLinc](/userguides/{resource}/accounts/#thinlinc) is an alternative to running an X11 server directly on your Windows computer. ThinLinc is a service that allows you to connect to a persistent remote graphical desktop session.
-- [MobaXterm](https://mobaxterm.mobatek.net/download.html) is a small, easy to use, full-featured SSH client. It includes X11 support for remote displays, SFTP capabilities, and limited SSH authentication forwarding for keys.
+- [MobaXterm :octicons-link-external-16:](https://mobaxterm.mobatek.net/download.html) is a small, easy to use, full-featured SSH client. It includes X11 support for remote displays, SFTP capabilities, and limited SSH authentication forwarding for keys.
 
 **Mac OS X:**
 
@@ -148,7 +148,7 @@ SSH will set the remote environment variable `$DISPLAY` to `"localhost:XX.YY"` w
     @env.macro
     def thinlinc_snippet(resource):
         return f"""
-RCAC provides [Cendio's *ThinLinc*](https://www.cendio.com/thinlinc/what-is-thinlinc) as an alternative to running an X11 server directly on your computer. It allows you to run graphical applications or graphical interactive jobs directly on {resource} through a persistent remote graphical desktop session.
+RCAC provides [Cendio's *ThinLinc* :octicons-link-external-16:](https://www.cendio.com/thinlinc/what-is-thinlinc) as an alternative to running an X11 server directly on your computer. It allows you to run graphical applications or graphical interactive jobs directly on {resource} through a persistent remote graphical desktop session.
 
 ThinLinc is a service that allows you to connect to a persistent remote graphical desktop session. This service works very well over a high latency, low bandwidth, or off-campus connection compared to running an X11 server locally. It is also very helpful for Windows users who do not have an easy to use local X11 server, as little to no set up is required on your computer.
 
@@ -158,7 +158,7 @@ There are two ways in which to use ThinLinc: preferably through the native clien
 
 The native ThinLinc client will offer the best experience especially over off-campus connections and is the recommended method for using ThinLinc. It is compatible with Windows, Mac OS X, and Linux.
 
-* Download the ThinLinc client from the [ThinLinc website](https://www.cendio.com/thinlinc/download).
+* Download the ThinLinc client from the [ThinLinc website :octicons-link-external-16:](https://www.cendio.com/thinlinc/download).
 * Start the ThinLinc client on your computer.
 * In the client's login window, use `desktop.{resource}.rcac.purdue.edu` as the Server. Use your Purdue Career Account username and password, but append "`,push`" to your password.
 * Click the Connect button.
@@ -169,7 +169,7 @@ The native ThinLinc client will offer the best experience especially over off-ca
 
 The ThinLinc service can be accessed from your web browser as a convenience to installing the native client. This option works with no set up and is a good option for those on computers where you do not have privileges to install software. All that is required is an up-to-date web browser. Older versions of Internet Explorer may not work.
 
-* Open a web browser and navigate to [`desktop.{resource}.rcac.purdue.edu`.](https://desktop.{resource}.rcac.purdue.edu).
+* Open a web browser and navigate to [`desktop.{resource}.rcac.purdue.edu`. :octicons-link-external-16:](https://desktop.{resource}.rcac.purdue.edu).
 * Log in with your Purdue Career Account username and password, but append "`,push`" to your password.
 * You may safely proceed past any warning messages from your browser.
 * Your Purdue Login Duo will receive a notification to approve your login.
@@ -226,7 +226,7 @@ The ThinLinc service can be accessed from your web browser as a convenience to i
         return f"""
 ## Overview / Slurm Basics
 
-{hostname.title()} uses the [Slurm Workload Manager](https://slurm.schedmd.com/) for job scheduling and management. With Slurm, a user requests resources and submits a job to a queue. The system takes jobs from queues, allocates the necessary compute nodes, and executes them.
+{hostname.title()} uses the [Slurm Workload Manager :octicons-link-external-16:](https://slurm.schedmd.com/) for job scheduling and management. With Slurm, a user requests resources and submits a job to a queue. The system takes jobs from queues, allocates the necessary compute nodes, and executes them.
 
 !!! note "SSHing into {hostname.title()} lands on login node"
     Users will typically SSH to {hostname.title()} (`<username>@{host}`) but note this lands you on a **login node**. Slurm should always be used to submit work as a job rather than running jobs directly on a login node.
@@ -438,13 +438,13 @@ Linux / Solaris / AIX / HP-UX / Unix:
 
 Microsoft Windows:
 
-* [MobaXterm](https://mobaxterm.mobatek.net/download.html)  
+* [MobaXterm :octicons-link-external-16:](https://mobaxterm.mobatek.net/download.html)  
   Free, full-featured, graphical Windows SSH, SCP, and SFTP client.
 
 Mac OS X:
 
 * The "sftp" command-line program should already be installed. You may start a local terminal window from "Applications->Utilities".
-* [Cyberduck](https://cyberduck.io/) is a full-featured and free graphical SFTP and SCP client.
+* [Cyberduck :octicons-link-external-16:](https://cyberduck.io/) is a full-featured and free graphical SFTP and SCP client.
 """
     
     @env.macro

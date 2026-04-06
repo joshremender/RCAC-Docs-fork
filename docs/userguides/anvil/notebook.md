@@ -22,7 +22,7 @@ Click the Login button above to log in via CLILogon. Select "ACCESS CI (XSEDE)" 
 
 ### Questions?
 
-Please file an [ACCESS help ticket](https://support.access-ci.org/help-ticket)
+Please file an [ACCESS help ticket :octicons-link-external-16:](https://support.access-ci.org/help-ticket)
 
 
 ## AnvilGPT integration
@@ -37,4 +37,4 @@ Please file an [ACCESS help ticket](https://support.access-ci.org/help-ticket)
 ## Pegasus on Anvil
 
 Documentation here
-[Pegasus link](http://access-ci.atlassian.net/wiki/spaces/ACCESSdocumentation/pages/564887553/Pegasus+Workflows) 
+[Pegasus link :octicons-link-external-16:](http://access-ci.atlassian.net/wiki/spaces/ACCESSdocumentation/pages/564887553/Pegasus+Workflows) 
