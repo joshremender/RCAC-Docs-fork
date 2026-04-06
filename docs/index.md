@@ -46,7 +46,15 @@ Follow these steps to get up and running on RCAC clusters.
 
     Write a Slurm batch script, submit it to the scheduler, and monitor your job's progress.
 
-    [:octicons-arrow-right-24: Job submission guide](faq/#i-have-access-to-cluster-how-to-submit-my-jobs-there)
+    [:octicons-arrow-right-24: Job submission guide](faq/#how-do-i-submit-jobs-on-a-rcac-cluster)
+
+-   :material-package-variant:{ .lg .middle } __Install Software__
+
+    ---
+
+    Find pre-installed modules via the LMOD system or request software from the RCAC help desk.
+
+    [:octicons-arrow-right-24: Software installation guide](faq/#how-do-i-install-software-on-a-rcac-cluster)
 
 </div>
 
