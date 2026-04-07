@@ -33,7 +33,7 @@ local icemdir = modroot.."/icemcfd/"..arch
 
 set_shell_function("rcac-runwb2", "runwb2 \"$@\"", "runwb2 $*")
 
-setenv("ANSYS252_DIR",modroot.."/ansys")
+setenv("ANSYS261_DIR",modroot.."/ansys")
 setenv("ICEM_ACN",icemdir)
 prepend_path("PATH",licensing.."/lic_admin")
 prepend_path("PATH",modroot.."/Framework/bin/Linux64")
