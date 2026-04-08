@@ -1,0 +1,17 @@
+---
+tags:
+  - Gautschi
+authors:
+  - jin456
+cluster: Gautschi
+search:
+  boost: 2
+---
+
+To stop a job before it finishes or remove it from a queue, use the ```scancel``` command:
+
+```bash
+scancel myjobid
+```
+
+[**Return to the guide**](index.md)
