@@ -131,7 +131,7 @@ To use X11, you will need to have a local X11 server running on your personal ma
 
 **Mac OS X:**
 
-- X11 is available as an optional install on the Mac OS X install disks prior to 10.7/Lion. Run the installer, select the X11 option, and follow the instructions. For 10.7+ please download [XQuartz](http://xquartz.macosforge.org/landing/).
+- X11 is available as an optional install on the Mac OS X install disks prior to 10.7/Lion. Run the installer, select the X11 option, and follow the instructions. For 10.7+ please download [XQuartz :octicons-link-external-16:](http://xquartz.macosforge.org/landing/).
 - [ThinLinc](/userguides/{resource}/accounts/#thinlinc) is an alternative to running an X11 server directly on your Mac computer. ThinLinc is a service that allows you to connect to a persistent remote graphical desktop session.
 
 ### Enabling X11 Forwarding in your SSH Client
