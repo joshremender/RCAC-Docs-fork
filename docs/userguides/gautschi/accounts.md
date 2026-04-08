@@ -3,6 +3,7 @@ tags:
   - Gautschi
 authors:
   - jin456
+  - remender
 resource: gautschi
 search:
   boost: 2
