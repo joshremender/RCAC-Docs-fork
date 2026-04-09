@@ -4,7 +4,15 @@
 [Previous page](plot_types.md){ .md-button .md-button--primary }
 
 ## Introduction
-TODO: Here
+When you have time-varying data, you cannot show that in a static plot, you need to animate it, so that you can see the variance of the data through time. In this section, we will discuss three separate ways to animate time-varying data:
+
+- FuncAnimation
+- ArtistAnimation
+- FFmpeg (external)
+
+The first two are intrinsic to MatPlotLib, where the third option is an external package that needs to be installed alongside MatPlotLib.
+
+The way these scripts work is that we first generate a data set, which is going to be a random walk in two dimensions. We randomly pick an angle and a step length, then we take that step and update from there.
 
 ## FuncAnimation
 
@@ -23,8 +31,8 @@ steps = np.arange(0,num_steps,1)
 for step in steps:
     step_angle = 2*np.pi*rng.random()
     step_size = 3*rng.random()
-    xs=np.append(xs, step_size*np.cos(step_angle))
-    ys=np.append(ys, step_size*np.sin(step_angle))
+    xs=np.append(xs, xs[-1]+step_size*np.cos(step_angle))
+    ys=np.append(ys, ys[-1]+step_size*np.sin(step_angle))
 
 min_x = np.min(xs)
 max_x = np.max(xs)
@@ -65,8 +73,8 @@ steps = np.arange(0,num_steps,1)
 for step in steps:
     step_angle = 2*np.pi*rng.random()
     step_size = 3*rng.random()
-    xs=np.append(xs, step_size*np.cos(step_angle))
-    ys=np.append(ys, step_size*np.sin(step_angle))
+    xs=np.append(xs, xs[-1]+step_size*np.cos(step_angle))
+    ys=np.append(ys, ys[-1]+step_size*np.sin(step_angle))
 
 min_x = np.min(xs)
 max_x = np.max(xs)
@@ -104,8 +112,8 @@ steps = np.arange(0,num_steps,1)
 for step in steps:
     step_angle = 2*np.pi*rng.random()
     step_size = 3*rng.random()
-    xs=np.append(xs, step_size*np.cos(step_angle))
-    ys=np.append(ys, step_size*np.sin(step_angle))
+    xs=np.append(xs, xs[-1]+step_size*np.cos(step_angle))
+    ys=np.append(ys, ys[-1]+step_size*np.sin(step_angle))
 
 min_x = np.min(xs)
 max_x = np.max(xs)
