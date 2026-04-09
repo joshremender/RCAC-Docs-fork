@@ -494,6 +494,53 @@
     "RCAC Workshops",
     "Anvil Kubernetes"
   ],
+  "/workshops/matplotlib/": [
+    "Home",
+    "RCAC Workshops",
+    "Scientific Visualization with MatPlotLib"
+  ],
+  "/introduction/": [
+    "Home",
+    "RCAC Workshops",
+    "Scientific Visualization with MatPlotLib",
+    "Getting Started"
+  ],
+  "/first_script/": [
+    "Home",
+    "RCAC Workshops",
+    "Scientific Visualization with MatPlotLib",
+    "Our First Script"
+  ],
+  "/sine_plot/": [
+    "Home",
+    "RCAC Workshops",
+    "Scientific Visualization with MatPlotLib",
+    "The Second Script"
+  ],
+  "/adv_plots/": [
+    "Home",
+    "RCAC Workshops",
+    "Scientific Visualization with MatPlotLib",
+    "Advanced Plotting"
+  ],
+  "/plot_types/": [
+    "Home",
+    "RCAC Workshops",
+    "Scientific Visualization with MatPlotLib",
+    "Types of Plots"
+  ],
+  "/colormaps/": [
+    "Home",
+    "RCAC Workshops",
+    "Scientific Visualization with MatPlotLib",
+    "Colormaps"
+  ],
+  "/animations/": [
+    "Home",
+    "RCAC Workshops",
+    "Scientific Visualization with MatPlotLib",
+    "Animations"
+  ],
   "/contact/": [
     "Home",
     "Contact us"
