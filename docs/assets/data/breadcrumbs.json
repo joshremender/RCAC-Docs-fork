@@ -499,43 +499,43 @@
     "RCAC Workshops",
     "Scientific Visualization with MatPlotLib"
   ],
-  "/introduction/": [
+  "/workshops/matplotlib/introduction/": [
     "Home",
     "RCAC Workshops",
     "Scientific Visualization with MatPlotLib",
     "Getting Started"
   ],
-  "/first_script/": [
+  "/workshops/matplotlib/first_script/": [
     "Home",
     "RCAC Workshops",
     "Scientific Visualization with MatPlotLib",
     "Our First Script"
   ],
-  "/sine_plot/": [
+  "/workshops/matplotlib/sine_plot/": [
     "Home",
     "RCAC Workshops",
     "Scientific Visualization with MatPlotLib",
     "The Second Script"
   ],
-  "/adv_plots/": [
+  "/workshops/matplotlib/adv_plots/": [
     "Home",
     "RCAC Workshops",
     "Scientific Visualization with MatPlotLib",
     "Advanced Plotting"
   ],
-  "/plot_types/": [
+  "/workshops/matplotlib/plot_types/": [
     "Home",
     "RCAC Workshops",
     "Scientific Visualization with MatPlotLib",
     "Types of Plots"
   ],
-  "/colormaps/": [
+  "/workshops/matplotlib/colormaps/": [
     "Home",
     "RCAC Workshops",
     "Scientific Visualization with MatPlotLib",
     "Colormaps"
   ],
-  "/animations/": [
+  "/workshops/matplotlib/animations/": [
     "Home",
     "RCAC Workshops",
     "Scientific Visualization with MatPlotLib",
