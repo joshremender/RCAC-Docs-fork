@@ -188,6 +188,15 @@ nav:
           - Resource Utilization and Monitoring: workshops/hpc_exchange/week4/monitor.md
           - Managing Workloads and Jobs: workshops/hpc_exchange/week4/workloads.md
       - Anvil Kubernetes: workshops/kubernetes-tutorial.md
+      - Scientific Visualization with MatPlotLib:
+        - workshops/matplotlib/index.md
+        - Getting Started: introduction.md
+        - Our First Script: first_script.md
+        - The Second Script: sine_plot.md
+        - Advanced Plotting: adv_plots.md
+        - Types of Plots: plot_types.md
+        - Colormaps: colormaps.md
+        - Animations: animations.md
   # - Tags: tags.md
   - Contact us: contact.md
   - FAQs: faq.md
