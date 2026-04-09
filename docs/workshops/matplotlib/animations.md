@@ -4,10 +4,11 @@
 [Previous page](plot_types.md){ .md-button .md-button--primary }
 
 ## Introduction
+TODO: Here
 
 ## FuncAnimation
 
-```
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
@@ -49,7 +50,7 @@ ani.save('animated.gif')
 
 ## ArtistAnimation
 
-```
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
@@ -88,7 +89,7 @@ ani.save('artists.gif')
 
 ## FFmpeg
 
-```
+```python
 import numpy as np
 import matplotlib.pyplot as plt
 import os
