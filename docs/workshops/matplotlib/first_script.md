@@ -10,7 +10,7 @@ While this is not a Python workshop, we need to know some python to fully utiliz
 - NumPy
 - MatPlotLib
 
-To do this, let's open a new text file, named 'First_script.py' and add some lines to it:
+To do this, let us open a new text file, named 'First_script.py' and add some lines to it:
 ```python
 import numpy as np
 import matplotlib.pyplot as plt

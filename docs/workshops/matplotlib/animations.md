@@ -12,7 +12,9 @@ When you have time-varying data, you cannot show that in a static plot, you need
 
 The first two are intrinsic to MatPlotLib, where the third option is an external package that needs to be installed alongside MatPlotLib.
 
-The way these scripts work is that we first generate a data set, which is going to be a random walk in two dimensions. We randomly pick an angle and a step length, then we take that step and update from there.
+The way these scripts work is that we first generate a data set, which is going to be a random walk in two dimensions. We randomly pick an angle and a step length, then we take that step from the previous step. And then we do that process again until we reach our total number of steps.
+
+After the data is generated, we set some initial values for the plot (such as the extent of the data). Then, we generate the plots and save them into a gif file.
 
 ## FuncAnimation
 
@@ -139,3 +141,7 @@ os.system('ffmpeg -hide_banner -loglevel panic -y -r 15 -f image2 -i figs/ffmpeg
 os.system('rm ffmpeg*.png')
 ```
 ![A gif of a random walk on loop. This one, the previous steps of the random walk gradually get more transparent until you cannot see them anymore.](./_static/ffmpeg.gif "FFmpeg Gif")
+
+!!! note 'Optimization'
+
+    There are ways that you could optimize these plots further, such as not appending to an array, and instead allocating the whole array in memory, then change each individual step. Another thing you could do is generate the plot inside the data generation loop. However, because it is a random walk, we do not know before hand what x- and y-limits should be put, so we generate the data and then the plots.

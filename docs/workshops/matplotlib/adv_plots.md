@@ -64,7 +64,7 @@ Lastly, line style controls how the line is displayed. This option is notated as
 - Dashed
 - Dash dot
 
-Here's the plot invocations for four lines using different stylings for each one:
+Here is the plot invocations for four lines using different stylings for each one:
 ```python
 ax.plot(x_values,y_values,label=r'$\sin$ label',marker='.',color='blue',linestyle='solid')
 ax.plot(x_values,y2_values,label=r'$\cos$ label',marker='*',color='orange',linestyle='dotted')
@@ -94,7 +94,7 @@ We can implement multiple axes when we create the figure in the first place. We 
 fig, (top_axes,bottom_axes) = plt.subplots(2,1)
 ```
 
-The first number is the number of vertical plots, and the second number is the number of horizontal plots. By default, if we don't pass anything to the function, it assumes one in each direction, leading to a single plot. Notice as well the parentheses around the two axes. This is how `plt.subplots()` returns the axes, as a list. We could also just assign the axes to a list object and access the different parts via indices, but it is better practice to label each variable holding each axes object.
+The first number is the number of vertical plots, and the second number is the number of horizontal plots. By default, if we do not pass anything to the function, it assumes one in each direction, leading to a single plot. Notice as well the parentheses around the two axes. This is how `plt.subplots()` returns the axes, as a list. We could also just assign the axes to a list object and access the different parts via indices, but it is better practice to label each variable holding each axes object.
 
 Add a `plt.show()` to the end without putting any data in to see the formation of the plots. So your `Multi_plot.py` script should look like this:
 
@@ -187,11 +187,11 @@ axes   = {"top_left":    fig.add_axes([0.10, 0.55,  0.40, 0.40]),
           "bottom":      fig.add_axes([0.10, 0.05,  0.85, 0.40])}
 ```
 
-The first two numbers in the list passed to `fig.add_axes()` are the lower left x-y coordinate in terms of the fraction of the whole figure (i.e. the number should span between 0 and 1). The next two numbers are the width and the height (respectively) of the added axes (also in terms of fraction of the figure). The reason that these aren't 0, 0.5, and 1 is that the axes need space for the tick labels (the numbers by the axes). If we run this new configuration of `Multi_plot.py`, we get a plot that looks like this:
+The first two numbers in the list passed to `fig.add_axes()` are the lower left x-y coordinate in terms of the fraction of the whole figure (i.e. the number should span between 0 and 1). The next two numbers are the width and the height (respectively) of the added axes (also in terms of fraction of the figure). The reason that these are not 0, 0.5, and 1 is that the axes need space for the tick labels (the numbers by the axes). If we run this new configuration of `Multi_plot.py`, we get a plot that looks like this:
 
 ![An image showing three plotting frames, two on top and one beneath, and they do not have any lines within them.](./_static/Non-uniform_empty.png "Non-Uniform Multi Plot")
 
-Here, to add data to the plots, we would utilize what is called a Python "dictionary". A dictionary in Python is a set of key-value pairs. To access the values, you index the dictionary by the key. The axes variable in the latest configuration is already a dictionary, which you can tell by the curly braces and the colons. The curly braces bookend the set of values, and the colon delimits what the key-value pair is. So, to access the bottom axes, we would use the command: `axes["bottom"]`. From there we could plot, or add limits, labels, or whatever else we desire. Here's an example script that uses the `fig.add_axes()` function:
+Here, to add data to the plots, we would utilize what is called a Python "dictionary". A dictionary in Python is a set of key-value pairs. To access the values, you index the dictionary by the key. The axes variable in the latest configuration is already a dictionary, which you can tell by the curly braces and the colons. The curly braces bookend the set of values, and the colon delimits what the key-value pair is. So, to access the bottom axes, we would use the command: `axes["bottom"]`. From there we could plot, or add limits, labels, or whatever else we desire. Here is an example script that uses the `fig.add_axes()` function:
 
 
 ```python
@@ -227,7 +227,7 @@ Notice that in this one, the titles are for each axes, not for the entire figure
 
 ## Saving Plots
 
-Up to this point, we have been interactively viewing the plots as we generate them. However, when we close out of the window, they are gone forever (until we run the script again). What if we want to save the plots to a file to have a reproducible view of the plot to put into, say, a paper? There's a simple command for that:
+Up to this point, we have been interactively viewing the plots as we generate them. However, when we close out of the window, they are gone forever (until we run the script again). What if we want to save the plots to a file to have a reproducible view of the plot to put into, say, a paper? There is a simple command for that:
 
 ```python
 plt.savefig('FigureName.png')

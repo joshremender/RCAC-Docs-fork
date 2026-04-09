@@ -248,7 +248,7 @@ plt.show()
 ```
 ![An image showing a heat map of data that goes from dark blue to yellow. The x- and y-axes range from 0 to 17.5.](./_static/Imshow_plot.png "Imshow Plot")
 
-In the previous script, we didn't pass the `X` and `Y` matrices to the `ax.imshow()` function, because it does not use them. We did pass an option `origin` that specifies where the matrix should start. By default, the data point at index `[0,0]` is plotted at the top left, and the last data point is the bottom right. If we pass `'lower'` to the `origin` option, this says that the index `[0,0]` is plotted at the bottom left, and the last data point is the top right.
+In the previous script, we did not pass the `X` and `Y` matrices to the `ax.imshow()` function, because it does not use them. We did pass an option `origin` that specifies where the matrix should start. By default, the data point at index `[0,0]` is plotted at the top left, and the last data point is the bottom right. If we pass `'lower'` to the `origin` option, this says that the index `[0,0]` is plotted at the bottom left, and the last data point is the top right.
 
 Also notice that the bounds of our data are from -5 to 5, but that the figure does not reflect that. It takes the number of data points as pixels as the x- and y-coordinates. We can however pass the `extent` option to `ax.imshow()` to specify the bounds of the data. That takes the form of `extent=[left, right, bottom, top]`, so in our case it would be `extent=[-5, 5, -5, 5]`.
 
