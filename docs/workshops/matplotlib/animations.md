@@ -4,13 +4,12 @@
 [Previous page](plot_types.md){ .md-button .md-button--primary }
 
 ## Introduction
-When you have time-varying data, you cannot show that in a static plot, you need to animate it, so that you can see the variance of the data through time. In this section, we will discuss three separate ways to animate time-varying data:
+When you have time-varying data, you cannot show that in a static plot, you need to animate it, so that you can see the variance of the data through time. In this section, we will discuss two separate ways to animate time-varying data:
 
 - FuncAnimation
 - ArtistAnimation
-- FFmpeg (external)
 
-The first two are intrinsic to MatPlotLib, where the third option is an external package that needs to be installed alongside MatPlotLib.
+Which are both intrinsic to MatPlotLib.
 
 The way these scripts work is that we first generate a data set, which is going to be a random walk in two dimensions. We randomly pick an angle and a step length, then we take that step from the previous step. And then we do that process again until we reach our total number of steps.
 
@@ -72,7 +71,7 @@ The second way to create an animation is to use the `ArtistAnimation` function, 
 
 In the following script, the imports and data creation are all the same as the previous script. But instead of defining a function to update the figure for us, we simply make a list of the plots we want to have in the animation.
 
-We also add some helper lists, `alphas` and `lws` which set the gradually decreasing transparency and line widths, respectively. 
+We also add some helper lists, `alphas` and `lws` which set the gradually decreasing transparency and line widths, respectively.
 
 ```python
 import numpy as np

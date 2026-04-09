@@ -9,11 +9,8 @@ Python is a programming language this is quick to learn and easy to use. Its use
 
 ## Packages
 
-In this series of workshops, we will focus on the MatPlotLib package and its uses. It was based off of MATLAB's plotting system, but implemented in a more intuitive way. There are a couple of other packages we will use along the way:
+In this series of workshops, we will focus on the MatPlotLib package and its uses. It was based off of MATLAB's plotting system, but implemented in a more intuitive way. The other package we will use along the way is **NumPy**: A C-based numeric library to perform quick mathematical operations.
 
-- **OS**: This one is used rarely, it interfaces with your operating system to perform some simple tasks
-- **NumPy**: A C-based numeric library to perform quick mathematical operations
-- **ffmpeg** (external): In one example of creating animated figures, we use the external (non-Python) ffmpeg package, which deals with creating and editing videos through the command line
 
 ## Installation
 
