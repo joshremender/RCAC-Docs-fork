@@ -33,7 +33,7 @@ local icemdir = modroot.."/icemcfd/"..arch
 
 set_shell_function("rcac-runwb2", "runwb2 \"$@\"", "runwb2 $*")
 
-setenv("ANSYS252_DIR",modroot.."/ansys")
+setenv("ANSYS261_DIR",modroot.."/ansys")
 setenv("ICEM_ACN",icemdir)
 prepend_path("PATH",licensing.."/lic_admin")
 prepend_path("PATH",modroot.."/Framework/bin/Linux64")
@@ -44,7 +44,7 @@ prepend_path("PATH",modroot.."/fluent/bin")
 prepend_path("PATH",modroot.."/ansys/bin")
 prepend_path("LD_LIBRARY_PATH",icemdir.."/lib")
 prepend_path("LD_LIBRARY_PATH",modroot.."/aisol/lib/linx64")
-prepend_path("LD_LIBRARY_PATH",modroot.."/Framework/bin/Linux64/Mesa")
+--prepend_path("LD_LIBRARY_PATH",modroot.."/Framework/bin/Linux64/Mesa")
 setenv("FLUENT_ARCH","lnamd64")
 setenv("FLUENT_HELP_BROWSER","firefox")
 setenv("LANG","en_US.UTF-8")
@@ -52,3 +52,6 @@ setenv("HOOPS_PICTURE","opengl")
 setenv("ANSYSLMD_LICENSE_FILE","1726@marina.ecn.purdue.edu")
 setenv("ANSYSLI_SERVERS","2325@marina.ecn.purdue.edu")
 setenv("RCAC_ANSYS_MPI", "Open MPI Distributed Parallel")
+
+-- add this env variable to make sure that there aren't any mpi errors
+setenv("I_MPI_HYDRA_BOOTSTRAP", "ssh")

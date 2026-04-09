@@ -56,7 +56,7 @@ Use `AVAIL_FEATURES` as tags as a constraint on clusters with more distinct hard
 
 Lastly, something you may want to specify is the *Quality of Service* (QoS) for the job. This would include the `standby` QoS for jobs that you want to use idle resources and not the high-priority resources in your lab account.
 
-For more information, see [Scheduler Modernization](https://www.rcac.purdue.edu/news/7245).
+For more information, see [Scheduler Modernization :octicons-link-external-16:](https://www.rcac.purdue.edu/news/7245).
 
 Essentially, you need to specify an account to submit to and a part of the cluster you want to submit to. Sometimes, you may want to specify a QoS for your job as well.
 

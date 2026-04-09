@@ -70,11 +70,11 @@ $ man rsync
 
 `SMB`, also known as Samba, is a way to connect a remote drive to your computer to transfer files back and forth to the clusters in a graphical way.
 
-To learn more about this option, please visit [SMB drives](https://www.rcac.purdue.edu/knowledge/negishi/storage/transfer/cifs).
+To learn more about this option, please visit [SMB drives :octicons-link-external-16:](https://www.rcac.purdue.edu/knowledge/negishi/storage/transfer/cifs).
 
 ### Globus
 
-For transferring large data to the cluster, you will want to use the [Globus transfer service](https://transfer.rcac.purdue.edu). If you want to transfer files from your local machine to the cluster, you will need to install the Globus Connect Personal software on your local computer.
+For transferring large data to the cluster, you will want to use the [Globus transfer service :octicons-link-external-16:](https://transfer.rcac.purdue.edu). If you want to transfer files from your local machine to the cluster, you will need to install the Globus Connect Personal software on your local computer.
 
 From the Globus transfer service, you can select a source and a destination. It will handle the actual transferring of the file(s) for you, resuming if there's network connectivity problems.
 

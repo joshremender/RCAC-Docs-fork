@@ -9,7 +9,7 @@ hide:
 # All software and versions on RCAC clusters
 
 ## Overview
-As of **March 28, 2026**, there have been a total of **274** applications with **2508** available versions deployed across **6** RCAC HPC clusters: **ANVIL, BELL, GAUTSCHI, GILBRETH, NEGISHI, SCHOLAR**.
+As of **April 08, 2026**, there have been a total of **274** applications with **2510** available versions deployed across **6** RCAC HPC clusters: **ANVIL, BELL, GAUTSCHI, GILBRETH, NEGISHI, SCHOLAR**.
 
 ## Applications Catalog
 
@@ -191,7 +191,7 @@ As of **March 28, 2026**, there have been a total of **274** applications with *
     <tr>
       <td><a href="../apps_md/comsol"><strong>comsol</strong></a></td>
       <td>Miscellaneous</td>
-      <td>BELL, GAUTSCHI, NEGISHI, SCHOLAR</td>
+      <td>BELL, GAUTSCHI, GILBRETH, NEGISHI, SCHOLAR</td>
     </tr>
     <tr>
       <td><a href="../apps_md/conda"><strong>conda</strong></a></td>
@@ -1041,7 +1041,7 @@ As of **March 28, 2026**, there have been a total of **274** applications with *
     <tr>
       <td><a href="../apps_md/quantumatk"><strong>quantumatk</strong></a></td>
       <td>Chemistry, Material Science</td>
-      <td>BELL, NEGISHI</td>
+      <td>BELL, GILBRETH, NEGISHI</td>
     </tr>
     <tr>
       <td><a href="../apps_md/r-devtools"><strong>r-devtools</strong></a></td>

@@ -5,10 +5,12 @@ hide:
 #   - navigation
 ---
 
+<div class="home-page" markdown>
+
 # Welcome to RCAC Documentation
 
 !!! Warning "Announcement"
-    **This is a demo site.** You are visiting a demo site designed for testing purposes only. Contents on this website may not reflect production RCAC resources. Check [rcac.purdue.edu](https://www.rcac.purdue.edu) for official information.
+    **This is a demo site.** You are visiting a demo site designed for testing purposes only. Contents on this website may not reflect production RCAC resources. Check [rcac.purdue.edu :octicons-link-external-16:](https://www.rcac.purdue.edu) for official information.
 
 ## :material-rocket-launch: New to RCAC?
 
@@ -22,7 +24,7 @@ Follow these steps to get up and running on RCAC clusters.
 
     Request access to RCAC computing resources through your Purdue career account or an ACCESS account.
 
-    [:octicons-arrow-right-24: Purdue account](https://www.rcac.purdue.edu/account/request) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:octicons-arrow-right-24: ACCESS account](userguides/anvil/access/)
+    [:octicons-arrow-right-24: Purdue account :octicons-link-external-16:](https://www.rcac.purdue.edu/account/request) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [:octicons-arrow-right-24: ACCESS account](userguides/anvil/access/)
 
 -   :material-connection:{ .lg .middle } __Connect to a RCAC Cluster__
 
@@ -46,7 +48,15 @@ Follow these steps to get up and running on RCAC clusters.
 
     Write a Slurm batch script, submit it to the scheduler, and monitor your job's progress.
 
-    [:octicons-arrow-right-24: Job submission guide](faq/#i-have-access-to-cluster-how-to-submit-my-jobs-there)
+    [:octicons-arrow-right-24: Job submission guide](faq/#how-do-i-submit-jobs-on-a-rcac-cluster)
+
+-   :material-package-variant:{ .lg .middle } __Install Software__
+
+    ---
+
+    Find pre-installed modules via the LMOD system or request software from the RCAC help desk.
+
+    [:octicons-arrow-right-24: Software installation guide](faq/#how-do-i-install-software-on-a-rcac-cluster)
 
 </div>
 
@@ -222,7 +232,7 @@ Follow these steps to get up and running on RCAC clusters.
 
     Join the Purdue research computing community to chat with peers and staff in real time.
 
-    [:octicons-arrow-right-24: Join Discord](https://discord.gg/PurdueRCAC)
+    [:octicons-arrow-right-24: Join Discord :octicons-link-external-16:](https://discord.gg/PurdueRCAC)
 
 -   :fontawesome-brands-github:{ .lg .middle } __GitHub__
 
@@ -230,7 +240,7 @@ Follow these steps to get up and running on RCAC clusters.
 
     Report documentation issues, suggest improvements, or contribute to RCAC open-source projects.
 
-    [:octicons-arrow-right-24: RCAC on GitHub](https://github.com/PurdueRCAC)
+    [:octicons-arrow-right-24: RCAC on GitHub :octicons-link-external-16:](https://github.com/PurdueRCAC)
 
 -   :material-card-account-details:{ .lg .middle } __Contact Details__
 
@@ -238,6 +248,8 @@ Follow these steps to get up and running on RCAC clusters.
 
     Find office hours, phone numbers, and other ways to connect with the RCAC support team.
 
-    [:octicons-arrow-right-24: Full contact info](https://www.rcac.purdue.edu/about/contact)
+    [:octicons-arrow-right-24: Full contact info :octicons-link-external-16:](https://www.rcac.purdue.edu/about/contact)
+
+</div>
 
 </div>
