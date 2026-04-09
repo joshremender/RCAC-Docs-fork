@@ -1,7 +1,7 @@
 # Our First Script
-[Back to main index](index.md)
+[Back to main index](index.md){ .md-button }
 
-[Previous page](introduction.md)
+[Previous page](introduction.md){ .md-button .md-button--primary }
 
 ## Beginning Python
 
@@ -132,4 +132,4 @@ ax.plot([1,-1,1,-1,1],[1,-1,-1,1,1])
 MatPlotLib really does just plot lines that connect the points you pass to it.
 
 In the next section, we will talk about plotting functions and styling figures:
-[Next Section](sine_plot.md)
+[Next Section](sine_plot.md){ .md-button .md-button--primary }

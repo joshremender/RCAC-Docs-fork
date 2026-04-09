@@ -1,7 +1,7 @@
 # Advanced Plotting
-[Back to main index](index.md)
+[Back to main index](index.md){ .md-button }
 
-[Previous page](sine_plot.md)
+[Previous page](sine_plot.md){ .md-button .md-button--primary }
 
 ## Multiple Lines
 
@@ -223,6 +223,8 @@ When we run this from the terminal, it results in a figure that looks like this:
 
 ![An image showing three plotting frames, two on top and one beneath. The top left plot shows a sine wave, the top right has a negative sine wave, and the bottom plot contains a cosine wave.](./_static/Non-uniform_lines.png "Non-Uniform Multi Lines")
 
+Notice that in this one, the titles are for each axes, not for the entire figure. Also, notice that some of the tick labels of the upper right plot overlap the plot in the top left. Try playing with the `fig.add_axes()` numbers until it looks better.
+
 ## Saving Plots
 
 Up to this point, we have been interactively viewing the plots as we generate them. However, when we close out of the window, they are gone forever (until we run the script again). What if we want to save the plots to a file to have a reproducible view of the plot to put into, say, a paper? There's a simple command for that:
@@ -235,4 +237,6 @@ Simply replace the `plt.show()` in the script with the `plt.savefig()` function 
 
 Of note, saving a figure does not clear it from memory, so if you save an intermediate figure, you can still plot more on top of it. If you do need to clear a figure of data, use the `plt.clf()` function.
 
-In the next section, we will discuss different types of plots and how to use them: [Next section](plot_types.md)
+In the next section, we will discuss different types of plots and how to use them:
+
+[Next section](plot_types.md){ .md-button .md-button--primary }

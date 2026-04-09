@@ -1,7 +1,7 @@
 # Our Next Script
-[Back to main index](index.md)
+[Back to main index](index.md){ .md-button }
 
-[Previous page](first_script.md)
+[Previous page](first_script.md){ .md-button .md-button--primary }
 
 ## Plotting Functions
 
@@ -159,4 +159,4 @@ We should get a plot that looks like this:
 Notice that now the plot is no longer square, as the aspect ratio and the plot limits have dictated that the plot is longer in the x-direction than it is in the y-direction.
 
 In the next section we will talk about some more advanced plotting topics, such as line styling and multiple lines:
-[Next Section](adv_plots.md)
+[Next Section](adv_plots.md){ .md-button .md-button--primary }
