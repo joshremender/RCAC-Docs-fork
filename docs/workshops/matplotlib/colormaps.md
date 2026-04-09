@@ -25,7 +25,7 @@ They also go into depth about the lightness of the colormaps as well as what eac
 
 ## Using Colormaps
 
-Using colormaps is quite simple: add the `cmap=` option to the plotting function you are using and MatPlotLib will handle the rest.
+Using colormaps is quite simple: add the `cmap='CMAP_NAME'` option to the plotting function you are using and MatPlotLib will handle the rest.
 
 In the following script, we use four different colormaps with the same `contourf` function on the same data. The invocation stays mostly the same, it just changes the `cmap` option on each one. We also use a new function, `fig.suptitle()`, which puts a title at the top of the figure, instead of on top of a specific set of axes. The `y` option (`y=0.94`) helps position the overall title so that there is not as much space around it as if we left that option off.
 
