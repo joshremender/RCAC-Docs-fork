@@ -9,3 +9,5 @@ Welcome to the web page for the RCAC MatPlotLib series of workshops. We start he
 * [The Second Script](sine_plot.md)
 * [Advanced Plotting](adv_plots.md)
 * [Types of Plots](plot_types.md)
+* [Colormaps](colormaps.md)
+* [Animations](animations.md)
