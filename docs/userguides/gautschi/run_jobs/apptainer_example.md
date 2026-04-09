@@ -23,7 +23,7 @@ Apptainer is like Docker but tuned explicitly for HPC clusters. More information
 - Launch MPI programs easily
 - Much more
 
-Apptainer’s user guide is available at: [apptainer.org/docs/user/main/introduction.html](apptainer.org/docs/user/main/introduction.html)
+Apptainer’s user guide is available at: [https://apptainer.org/docs/user/main/introduction.html :octicons-link-external-16:](https://apptainer.org/docs/user/main/introduction.html)
 
 ## Example
 Here is an example using an Ubuntu 16.04 image on Gautschi:
