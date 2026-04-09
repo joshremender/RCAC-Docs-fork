@@ -64,6 +64,57 @@ plt.show()
 ```
 ![An image showing four filled contour plots, each with different colors for their levels. The top left is the default colormap: viridis. The top right uses the magma colormap, which ranges from black to white through oranges and reds. The bottom left uses the greens colormap, which goes from white to dark green. The bottom right uses the seismic colormap, which starts at blue, then goes to white, and ends up red.](./_static/Colormaps.png "Filled Contour Plots Showing Colormaps")
 
+## Colormap Scales
+
+What if you had some non-linear scale you wanted to show of data, or data that has a large span? MatPlotLib allows you to change the scale, or normalization of the colormap. In the following script, we show three types of color normalizations:
+
+- **Linear**
+- **Logarithmic**
+- **Centered**
+
+**Linear** is the default and linearly increases from your data's minimum to its maximum. **Logarithmic** uses a linear scale through powers of 10 to place more emphasis on smaller data values. **Centered** puts the center of the scale at 0 and essentially maps the data to go from the largest absolute value of your data down to the negative largest absolute value.
+
+To implement these scales, we need to import one more package: `matplotlib.colors` at the top of our script, and we will nickname it: `colors`. Then in the plotting invocation, we can use the `norm=NORMALIZATION` option to specify the normalization of the data. Here we use the `ax.imshow()` function to plot the data, with a specified `extent=[left,right,bottom,top]` to constrain the span of the data. We use two different functions: one that is strictly positive (for the top two plots) and one that spans positive and negative (for the bottom two plots). The strictly positive one is necessary because the logarithmic norm fails if there are negative values in the data. There is an option for a two-sided logarithmic norm that uses a logarithmic scale for both sides of zero. Details of that normalization can be found [**here**](https://matplotlib.org/stable/users/explain/colors/colormapnorms.html#symmetric-logarithmic).
+
+```
+import matplotlib.pyplot as plt
+import numpy as np
+import matplotlib.colors as colors
+
+bound = 5
+
+X, Y = np.meshgrid(np.linspace(-bound, bound, 10*bound), np.linspace(-bound, bound, 10*bound))
+LOG = np.abs(20*X-10*np.sin(Y))+X**2+np.log(Y**2+5)
+
+Z1 = np.exp(-X**2 - Y**2)
+Z2 = np.exp(-(X - 1)**2 - (Y - 1)**2)
+CEN = (0.9*Z1 - 0.5*Z2) * 2
+
+fig, ((ax_tl,ax_tr),(ax_bl,ax_br)) = plt.subplots(2,2,figsize=(10,8))
+
+fig.suptitle('Color Scales', fontweight='bold', y=0.94)
+
+cfax_tl = ax_tl.imshow(LOG, extent=[-bound,bound,-bound,bound],origin='lower')
+fig.colorbar(cfax_tl)
+ax_tl.set_title('Linear')
+
+cfax_tr = ax_tr.imshow(LOG, extent=[-bound,bound,-bound,bound], norm=colors.LogNorm(), origin='lower')
+fig.colorbar(cfax_tr)
+ax_tr.set_title('Logarithmic')
+
+cfax_bl = ax_bl.imshow(CEN, extent=[-bound,bound,-bound,bound],origin='lower',cmap='seismic')
+fig.colorbar(cfax_bl)
+ax_bl.set_title('Linear')
+
+cfax_br = ax_br.imshow(CEN, extent=[-bound,bound,-bound,bound], norm=colors.CenteredNorm(), origin='lower', cmap='seismic')
+fig.colorbar(cfax_br)
+ax_br.set_title('Centered')
+
+plt.show()
+```
+
+![An image showing four filled contour plots, each with different normalizations for their colors. The top two plots have the default colormap: viridis (blue, green, and yellow). The top left uses a linear scale for coloring, where the top right uses a logarithmic scale. The bottom two plots use the seismic colormap, which is blue, then white, then red. The bottom left plot is mostly blue and uses a standard linear map. The bottom right plot is mostly white as it uses a centered scaling, which goes around 0.](./_static/Color_scales.png "Heat Maps Showing Color Scales")
+
 In the next section, we will discuss how to make a time-series of plots into an animation, such as a gif.
 
 [Next section](animations.md){ .md-button .md-button--primary }
