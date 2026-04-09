@@ -190,13 +190,13 @@ nav:
       - Anvil Kubernetes: workshops/kubernetes-tutorial.md
       - Scientific Visualization with MatPlotLib:
         - workshops/matplotlib/index.md
-        - Getting Started: introduction.md
-        - Our First Script: first_script.md
-        - The Second Script: sine_plot.md
-        - Advanced Plotting: adv_plots.md
-        - Types of Plots: plot_types.md
-        - Colormaps: colormaps.md
-        - Animations: animations.md
+        - Getting Started: workshops/matplotlib/introduction.md
+        - Our First Script: workshops/matplotlib/first_script.md
+        - The Second Script: workshops/matplotlib/sine_plot.md
+        - Advanced Plotting: workshops/matplotlib/adv_plots.md
+        - Types of Plots: workshops/matplotlib/plot_types.md
+        - Colormaps: workshops/matplotlib/colormaps.md
+        - Animations: workshops/matplotlib/animations.md
   # - Tags: tags.md
   - Contact us: contact.md
   - FAQs: faq.md
