@@ -116,7 +116,7 @@
      [~/Desktop]$
      ```
 
-10) remove the `practice1` directory, and show the files thar are being removed.
+10) remove the `practice1` directory, and show the files that are being removed.
 
 ??? tip "solution"
      ```bash
