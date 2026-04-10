@@ -53,18 +53,19 @@ The Data Depot is good for shared configuration files, software installation, sc
 
 #### Path: `/scratch/<cluster>/username`
 
-Your scratch directory is a high-performance directory on each cluster. It is huge (100+TB), however it does have a file number limit (in the millions), so make sure to not have a bunch of tiny files, use the `tar` and `zip` programs to bundle files together. It is highly performant, but cluster specific, in that it is shared across nodes in a cluster, but not across clusters. It is also mountable as a network drive on your local computer.
-It is also private per user, other members of your group cannot access it.
+Your scratch directory is a high-performance directory on each cluster. It is huge (100+TB), however it does have a file number limit (in the millions), so make sure to not have a bunch of tiny files.
 
 The scratch system is internally redundant, so you don't have to worry about hardware failure corrupting your data, but there are no snapshots, so files are not recoverable if deleted. **It is also regularly purged of older files.**
 
 Scratch directories are good for intermediate to massive data I/O, so are perfect for data intensive jobs. It is **NOT** for the primary copy of your data or software. And it is **NOT for long-term storage.** It is only for short-term storage of intermediate results.
 
-![An image showing files in a users scratch space being slowly transferred on a conveyor belt to a fire representing a file purge](../_static/scratch_purge.png)
+!!! warning Scratch Purge Cycles
+     Scratch directories are **regularly purged of old data**. If a file is not accessed within 60 days (30 days on Bell), it will be staged for purging. RCAC sends courtesy Email warnings to users when files are staged for purging, but you should not rely on these Emails. Please be proactive in backing up any valuable data or results you have stored in scratch. 
 
-!!! warning
-     Beware of regular purging of older files. You can use the `purgelist` program to  tell you which files will be purged. Please do not try to game the system, as we will ban users who repeatedly do so. Just back older files up to Fortress instead of storing them on Scratch.
+     <!-- ![An image showing files in a users scratch space being slowly transferred on a conveyor belt to a fire representing a file purge](../_static/scratch_purge.png) -->
 
+     You can use the `purgelist` command to tell you which files in your `/scratch` directory are staged to be purged.
+     
 ### Temporary directory
 #### Path: `/tmp`
 
