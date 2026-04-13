@@ -378,13 +378,6 @@ th, td {
   }
 }
 
-/* 1.3 WCAG 1.4.1: underline body-text links so they are distinguishable
-   from surrounding text by more than color alone.
-   Exclude buttons, heading anchor links, hero links, and breadcrumb links
-   which already have distinct visual treatment. */
-.md-typeset a:not(.md-button):not(.headerlink):not(.hero-link):not(.breadcrumb-link) {
-  text-decoration: underline;
-}
 
 .perm-type {
   background: rgba(255, 87, 34, 0.35); /* file type */
