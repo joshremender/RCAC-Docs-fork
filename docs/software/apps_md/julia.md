@@ -8,7 +8,7 @@ The Julia Language: A fresh approach to technical computing
 
 ## Homepage
 
-[https://julialang.org](https://julialang.org){:target="_blank"}
+[https://julialang.org :octicons-link-external-16:](https://julialang.org){:target="_blank"}
 
 ## Available Versions on RCAC Clusters
 
@@ -16,7 +16,7 @@ The Julia Language: A fresh approach to technical computing
 |---|---|
 **ANVIL**|1.6.2, 1.9.3, 1.10.9, 1.11.4 (D), 1.11.6
 **BELL**|1.9.3, 1.11.4 (D), 1.11.6
-**GAUTSCHI**|1.11.1, 1.11.4 (D), 1.11.6
+**GAUTSCHI**|1.11.1 (D), 1.11.4, 1.11.6
 **GILBRETH**|1.11.3, 1.11.4 (D), 1.11.6
 **NEGISHI**|1.8.5, 1.9.3, 1.11.4 (D), 1.11.6
 **SCHOLAR**|1.11.4 (D), 1.11.6

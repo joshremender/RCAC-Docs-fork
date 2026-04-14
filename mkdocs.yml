@@ -15,12 +15,10 @@ theme:
     # Back-to-top button
     - navigation.top
     - navigation.footer
-    #- navigation.sections
-    #- navigation.expand
+    - navigation.sections
     - toc.follow
     - search.suggest
     - search.highlight
-    #- search.share
     - content.code.copy
   palette:
     - media: "(prefers-color-scheme)"
@@ -44,11 +42,11 @@ theme:
 
 extra_css:
   - stylesheets/extra.css
-  - assets/css/tablefilter.css
 extra_javascript:
   - assets/js/tablefilter.js
   - assets/js/init-tablefilter.js
   - assets/js/breadcrumbs.js
+  - assets/js/external-links.js
 
 plugins:
   - search
@@ -77,9 +75,8 @@ plugins:
   - macros
 
 nav:
-  - Home: index.md
   - HPC User Guides:
-    - Anvil User Guide:
+    - Anvil:
       - userguides/anvil/index.md
       - About:
         - Overview: userguides/anvil/overview.md
@@ -91,14 +88,22 @@ nav:
       - Anvil Software: userguides/anvil/anvil-software.md
       - Help Desk: userguides/anvil/help.md
       - Anvil Composable Subsystem:
+        - userguides/anvil/composable/index.md
         - Getting Started: userguides/anvil/composable/getting-started.md
         - Concepts: userguides/anvil/composable/concepts.md
         - Examples: userguides/anvil/composable/examples.md
+      - Anvil Object Storage:
+        - userguides/anvil/objectstorage/index.md
+        - Getting Started: userguides/anvil/objectstorage/getting-started.md
+        - Object Storage Concepts: userguides/anvil/objectstorage/concepts.md
+        - Access: userguides/anvil/objectstorage/access.md
+        - User Tools: userguides/anvil/objectstorage/usertools.md
+        - Security and Access Control: userguides/anvil/objectstorage/acl.md
       - AnvilGPT (LLM): userguides/anvil/anvilgpt.md
       - Anvil Notebook: userguides/anvil/notebook.md
       - Maintenance Log: userguides/anvil/maintenance.md
-      - Key Policies: userguides/anvil/policies.md
-    - Gautschi User Guide:
+      - Policies: userguides/anvil/policies.md
+    - Gautschi:
       - userguides/gautschi/index.md
       - Gautschi Overview: userguides/gautschi/overview.md
       - Biography of Gautschi: userguides/gautschi/biography.md
@@ -110,69 +115,92 @@ nav:
       - Compiling Source Code: userguides/gautschi/compile.md
       - Frequently Asked Questions: userguides/gautschi/faq.md
       - Datasets: userguides/gautschi/datasets.md
-  - RCAC Blogs:
-    - blog/index.md
-  - Software:
-    - software/index.md
-    - All Software: software/app_catalog.md
-    - Compilers: software/compilers_catalog.md
-    - MPIs: software/mpi_catalog.md
-    - Computational Chemistry: software/chemistry_catalog.md
-    - Fluid Dynamics: software/fluid_dynamics_catalog.md
-    - Audio/Visualization: software/audio_visual_catalog.md
-    - Library: software/library_catalog.md
-    - Mathematics/Statistics: software/math_stat_catalog.md
-    - Engineering: software/engineering_catalog.md
-    - Geoscience: software/geoscience_catalog.md
-    - Utilities: software/utilities_catalog.md
-    - Workflow: software/workflow_catalog.md
-  - Datasets:
-    - datasets/index.md
-    - AI: datasets/ai.md
-    - Hydrological: datasets/hydrological.md
-    - Meteorological: datasets/meteorological.md
-    - Geospatial: datasets/geospatial.md
-    - Covariates: datasets/Covariates.md
-    - GeoAI: datasets/geoai.md
-    - Igenomes: datasets/igenomes.md
-  - RCAC Workshops:
-    - workshops/index.md
-    - HPC Exchange:
-      - workshops/hpc_exchange/index.md
-      - Week 1:
-        - Week 1 Index: workshops/hpc_exchange/week1/week1.md
-        - Setting up for the workshop: workshops/hpc_exchange/week1/terminal.md
-        - How to Access the Clusters: workshops/hpc_exchange/week1/access.md
-        - What is Unix: workshops/hpc_exchange/week1/unix.md
-        - What is the Shell: workshops/hpc_exchange/week1/shell.md
-        - Anatomy of a Command: workshops/hpc_exchange/week1/anatomy.md
-        - Navigate the Filesystem: workshops/hpc_exchange/week1/navigate.md
-        - Editing files from the command line: workshops/hpc_exchange/week1/edit.md
-        - Command Reference: workshops/hpc_exchange/week1/reference.md
-      - Week 2:
-        - Week 2 Index: workshops/hpc_exchange/week2/week2.md
-        - Purdue Clusters: workshops/hpc_exchange/week2/clusters.md
-        - Access: workshops/hpc_exchange/week2/access.md
-        - Files: workshops/hpc_exchange/week2/files1.md
-        - Applications: workshops/hpc_exchange/week2/applications.md
-        - What is a Cluster: workshops/hpc_exchange/week2/what_cluster.md
-        - Jobs: workshops/hpc_exchange/week2/jobs.md
-      - Week 3:
-        - Week 3 Index: workshops/hpc_exchange/week3/week3.md
-        - Scripting: workshops/hpc_exchange/week3/scripts.md
-        - Managing Processes: workshops/hpc_exchange/week3/processes.md
-        - Managing Output with Pipes: workshops/hpc_exchange/week3/pipes.md
-        - Managing Files and Directories: workshops/hpc_exchange/week3/managing_files.md
-      - Week 4:
-        - Week 4 Index: workshops/hpc_exchange/week4/week4.md
-        - File storage and transfers: workshops/hpc_exchange/week4/files2.md
-        - Multinode jobs and topology: workshops/hpc_exchange/week4/multinode.md
-        - Job History: workshops/hpc_exchange/week4/history.md
-        - Resource Utilization and Monitoring: workshops/hpc_exchange/week4/monitor.md
-        - Managing Workloads and Jobs: workshops/hpc_exchange/week4/workloads.md
-    - Anvil Kubernetes: workshops/kubernetes-tutorial.md
-  - Tags: tags.md
+    - Bell: https://www.rcac.purdue.edu/knowledge/bell
+    - Negishi: https://www.rcac.purdue.edu/knowledge/negishi
+    - Gilbreth: https://www.rcac.purdue.edu/knowledge/gilbreth
+    - Scholar: https://www.rcac.purdue.edu/knowledge/scholar
+  - Storage User Guides:
+    - Data Depot: https://www.rcac.purdue.edu/knowledge/depot
+    - Fortress: https://www.rcac.purdue.edu/knowledge/fortress
+    - Scratch: https://www.rcac.purdue.edu/knowledge/scratch
+    - Home Directory: https://www.rcac.purdue.edu/knowledge/home
+    - Box Research Lab Folder: https://www.rcac.purdue.edu/knowledge/boxfolder
+  - RCAC Resources:
+    - RCAC Blogs:
+      - blog/index.md
+    - Software:
+      - software/index.md
+      - All Software: software/app_catalog.md
+      - Compilers: software/compilers_catalog.md
+      - MPIs: software/mpi_catalog.md
+      - Computational Chemistry: software/chemistry_catalog.md
+      - Fluid Dynamics: software/fluid_dynamics_catalog.md
+      - Audio/Visualization: software/audio_visual_catalog.md
+      - Library: software/library_catalog.md
+      - Mathematics/Statistics: software/math_stat_catalog.md
+      - Engineering: software/engineering_catalog.md
+      - Geoscience: software/geoscience_catalog.md
+      - Utilities: software/utilities_catalog.md
+      - Workflow: software/workflow_catalog.md
+    - Datasets:
+      - datasets/index.md
+      - AI: datasets/ai.md
+      - Hydrological: datasets/hydrological.md
+      - Meteorological: datasets/meteorological.md
+      - Geospatial: datasets/geospatial.md
+      - Covariates: datasets/Covariates.md
+      - GeoAI: datasets/geoai.md
+      - Igenomes: datasets/igenomes.md
+    - RCAC Workshops:
+      - workshops/index.md
+      - HPC Exchange:
+        - workshops/hpc_exchange/index.md
+        - Week 1:
+            - workshops/hpc_exchange/week1/index.md
+            - Setting up: workshops/hpc_exchange/week1/setup.md
+            - Access: workshops/hpc_exchange/week1/access.md
+            - Unix: workshops/hpc_exchange/week1/unix.md
+            - The Shell: workshops/hpc_exchange/week1/shell.md
+            - Commands: workshops/hpc_exchange/week1/commands.md
+            - Navigating Filesystems: workshops/hpc_exchange/week1/filesystem.md
+            - Editing Files: workshops/hpc_exchange/week1/editing.md
+            - Command Reference: workshops/hpc_exchange/week1/reference.md
+        - Week 2:
+            - workshops/hpc_exchange/week2/index.md
+            - What is a Cluster?: workshops/hpc_exchange/week2/what-is-a-cluster.md
+            - Purdue Clusters: workshops/hpc_exchange/week2/clusters.md
+            - Cluster Access: workshops/hpc_exchange/eek2/access.md
+            - Cluster Applications: workshops/hpc_exchange/week2/applications.md
+            - Cluster Job Submission: workshops/hpc_exchange/week2/slurm-basics.md
+            - File Storage and Transfer: workshops/hpc_exchange/week2/storage-transfer.md
+        - Week 3:
+            - workshops/hpc_exchange/week3/index.md
+            - Scripting: workshops/hpc_exchange/week3/scripting.md
+
+            - Pipes: workshops/hpc_exchange/week3/pipes.md
+            - Managing processes: workshops/hpc_exchange/week3/processes.md
+            - Files & directories: workshops/hpc_exchange/week3/files-directories.md
+        - Week 4:
+            - workshops/hpc_exchange/week4/index.md
+            - Storage & transfers: workshops/hpc_exchange/week4/storage-transfer.md
+            - Job history: workshops/hpc_exchange/week4/job-history.md
+            - Utilization & monitoring: workshops/hpc_exchange/week4/utilization-monitoring.md
+            - Workload management: workshops/hpc_exchange/week4/workload-management.md
+            - Multinode & topology: workshops/hpc_exchange/week4/multinode-topology.md
+      - Anvil Kubernetes: workshops/kubernetes-tutorial.md
+      - Scientific Visualization with MatPlotLib:
+        - workshops/matplotlib/index.md
+        - Getting Started: workshops/matplotlib/introduction.md
+        - Our First Script: workshops/matplotlib/first_script.md
+        - The Second Script: workshops/matplotlib/sine_plot.md
+        - Advanced Plotting: workshops/matplotlib/adv_plots.md
+        - Types of Plots: workshops/matplotlib/plot_types.md
+        - Colormaps: workshops/matplotlib/colormaps.md
+        - Animations: workshops/matplotlib/animations.md
+        - Envision Center: workshops/matplotlib/env_cent.md
+  # - Tags: tags.md
   - Contact us: contact.md
+  - FAQs: faq.md
 
 extra:
   social:
