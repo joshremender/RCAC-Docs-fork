@@ -402,3 +402,69 @@ th, td {
   border-radius: 3px;
   padding: 0 2px;
 }
+
+/* ── Announcement banner (homepage only) ─────────────────────── */
+.announcement-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.75rem 1.5rem;
+  margin: -1rem 0 1.5rem;
+  background: linear-gradient(90deg, #f5efe0 0%, #faf6ee 100%);
+  border-left: 4px solid #CEB888;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.9rem;
+}
+
+.announcement-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.announcement-text {
+  flex: 1;
+  color: var(--md-default-fg-color);
+}
+
+.announcement-text a {
+  font-weight: 600;
+  color: #8C6D23;
+  margin-left: 0.4rem;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.announcement-text a:hover {
+  text-decoration: underline;
+}
+
+.announcement-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color--light);
+  padding: 0 0.25rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.announcement-close:hover {
+  color: var(--md-default-fg-color);
+}
+
+[data-md-color-scheme="slate"] .announcement-banner {
+  background: linear-gradient(90deg, #2a2518 0%, #211f16 100%);
+  border-left-color: #CEB888;
+}
+
+[data-md-color-scheme="slate"] .announcement-text a {
+  color: #e0c97a;
+}
+
+@media (max-width: 480px) {
+  .announcement-banner {
+    padding: 0.6rem 1rem;
+    font-size: 0.82rem;
+  }
+}
