@@ -87,9 +87,18 @@ The software catalog is **automatically generated** from HPC module files:
 **Topics**: MPI, Compilers, Audio/Visual, Climate, Chemistry, Fluid Dynamics, Geoscience, Library, Material Science, Math/Stat, Engineering, Programming, Utilities, Workflow, Misc.
 ## Automation & Workflows
 ### Branches
-- `main`: production branch; changes here deploy to https://docs.rcac.purdue.edu
-- `dev`: development/staging branch; `main` is automatically merged into `dev` (with dev-only files preserved)
-- Direct PRs from `dev` into `main` are **blocked** by CI
+> **Heads-up for agents and new contributors**: despite its name, `dev` is **not** a generic development/integration branch. Do **not** treat it the way you would a `dev` branch in a conventional dev→main flow. Read the section below before pushing, merging, or opening PRs involving `dev`.
+
+- `main`: **trunk and the only production branch.** All normal content and feature work targets `main` directly via PR. `main` is what deploys to https://docs.rcac.purdue.edu.
+- `dev`: a **long-lived, permanently-divergent WCAG 2.1 accessibility remediation branch.** It carries an experimental Material theme override layer (ARIA labels, dedup'd form labels, contrast fixes) that is **not yet ready for production**. It is served separately from its own Geddes environment (`k8s/geddes-dev/`, `Dockerfile.geddes`, `deploy_to_geddes_dev.yml`) for WAVE re-audits. See `dev.md` on the `dev` branch for the remediation plan and phase history.
+- Data flow is **main → dev**, not the other way around. `sync_main_to_dev.yml` forward-merges `main` into `dev` on every push so the a11y preview stays current with content, while preserving the dev-only framework layer.
+- Direct PRs from `dev` into `main` are **blocked** by CI (`block_dev_to_main.yml`). When the a11y work is complete and accepted, the expected endgame is a deliberate, curated PR of the theme layer into `main` — not an automatic merge.
+
+#### Guidance for agents
+- Default working branch for any content, nav, workflow, infra, or macro change is **`main`** (usually via a short-lived feature/`wip` branch PR'd into `main`).
+- Do **not** cherry-pick, rebase, or PR from `dev` into `main` without an explicit human request tied to the a11y rollout.
+- When editing files in the dev-only a11y layer (`docs/stylesheets/extra.css`, `overrides/partials/toc.html`, `docs/assets/js/a11y.js`, the `a11y.js` entry in `mkdocs.yml`, `overrides/base.html`, `overrides/partials/{header,logo,nav,nav-item,palette,search}.html`, `dev.md`, `Dockerfile.geddes`, `k8s/geddes-dev/`, `deploy_to_geddes_dev.yml`, `wcag_audit/`), work on `dev` — changes made on `main` to these files can be overwritten or clobbered by the sync workflow's "preserve dev" logic.
+- The sync workflow's list of preserved paths is **hardcoded** in `sync_main_to_dev.yml`; if a11y work expands to new files, that workflow must be updated or those files will be overwritten on the next sync.
 ### GitHub Actions
 #### 1. `deploy_to_geddes_prod.yml` — **primary production deployment**
 - **Triggers**: Push to `main` (excluding `modulefiles/**`, `tools/**`, `wcag_audit/**`); also manual `workflow_dispatch`
@@ -116,10 +125,11 @@ The software catalog is **automatically generated** from HPC module files:
 - **Logic**: Only includes parent titles if parent has an `index.md`; root `/` is excluded
 #### 5. `sync_main_to_dev.yml`
 - **Triggers**: Push to `main`; manual `workflow_dispatch`
-- **Purpose**: Keep `dev` current with `main` while preserving dev-only framework files (`docs/stylesheets/`, `overrides/partials/toc.html`, `a11y.js` entry in `mkdocs.yml`)
+- **Purpose**: Forward-merge `main` into the a11y remediation branch `dev` so it stays current with production content, while **hardcoded-preserving** the dev-only a11y framework layer: `docs/stylesheets/`, `overrides/partials/toc.html`, and the `a11y.js` entry in `mkdocs.yml` (re-added via `sed` if absent).
+- **Caveat**: the preserved-paths list is hardcoded. If the a11y work adds or moves files outside that list, this workflow must be updated or those files will be clobbered on the next sync.
 #### 6. `block_dev_to_main.yml`
 - **Triggers**: Pull requests targeting `main`
-- **Purpose**: Fail CI if the PR source branch is `dev` (prevents direct dev→main merges)
+- **Purpose**: Fail CI if the PR source branch is `dev`. This is a guardrail against accidentally shipping the experimental a11y theme layer to production — **not** a statement that the workflow is inverted. See the **Branches** section above for the intended model.
 ### Kubernetes Deployment (Geddes)
 Manifests live in `k8s/geddes-prod/` and are applied to the `rcac-docs` namespace on the Geddes cluster:
 - `deployment.yaml`: `rcac-docs-prod` Deployment, 1 replica, image `ghcr.io/purduercac/rcac-docs-prod:latest`, `imagePullPolicy: Always`, `imagePullSecrets: ghcr-secret`, modest CPU/memory limits
@@ -159,8 +169,8 @@ docker run --rm -p 8080:80 rcac-docs-prod:local
 #### Content Changes
 1. Edit markdown files in `docs/`
 2. Test locally with `mkdocs serve`
-3. Open a PR into `main` (do **not** PR from `dev` into `main` — it is blocked by CI)
-4. On merge to `main`, `deploy_to_geddes_prod.yml` builds and pushes the image; the Geddes CronJob rolls the deployment within ~5 minutes
+3. Open a PR into `main` from a short-lived feature or `wip` branch. Do **not** PR from `dev` into `main` — it is blocked by CI, and `dev` is the a11y remediation branch, not a staging branch for content.
+4. On merge to `main`, `deploy_to_geddes_prod.yml` builds and pushes the image; the Geddes CronJob rolls the deployment within ~5 minutes. `sync_main_to_dev.yml` separately forwards the merge onto `dev` for the a11y preview.
 #### Software Catalog Updates
 1. Add/modify module files in `modulefiles/`
 2. Push/merge to `main` (or `dev`)
@@ -208,7 +218,8 @@ Reusable content snippets defined as Python functions (via `mkdocs-macros-plugin
 - Link to related pages within user guides
 - Tag blog posts with appropriate categories (Anvil, Gautschi, Software, Slurm, Workflows)
 ### Version Control
-- Prefer landing changes on `main` via PR; let `sync_main_to_dev.yml` forward them to `dev`
+- Land all content/feature/workflow changes on `main` via PR; `sync_main_to_dev.yml` will forward them to the a11y `dev` branch automatically
+- Touch `dev` directly **only** for WCAG/a11y remediation work on the override layer; never backport `dev` to `main` outside of an explicit, curated a11y rollout
 - Oz-assisted commits include trailer: `Co-Authored-By: Oz <oz-agent@warp.dev>`
 - Bot commits are authored as: `purduercac-docs-bot@users.noreply.github.com`
 ### Testing
