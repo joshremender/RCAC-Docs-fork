@@ -52,8 +52,8 @@ Mac OS X:
     When prompted to enter a password, enter your Purdue career account password **followed by "**`,push` **"**. Your Duo app will then receive a notification to approve the login.
 
 ### SSH Keys
-SSH keys can be used in lieu of the Duo passphrase "password,push" for password-less logins. Refer to the blog post at [PLACEHOLDER URL :octicons-link-external-16:](http://localhost:8080/blog/2026/01/15/creating-an-ssh-key-pair-for-password-less-logins) for more information.
+SSH keys can be used in lieu of the Duo passphrase "password,push" for password-less logins. Refer to the blog post [here](../../blog/posts/ssh_key_creation.md) for more information.
 
 
 ### ThinLinc
-It's possible to login to {{ resource }} using the ThinLinc desktop app. Refer to the blog post at [PLACEHOLDER URL :octicons-link-external-16:](http://localhost:8080/blog/2026/01/14/logging-in-to-the-community-clusters-via-thinlinc) URL for more information on the installation and login steps.
+It's possible to login to {{ resource }} using the ThinLinc desktop app. Refer to the blog post [here](../../blog/posts/thinlinc-login.md) for more information on the installation and login steps.
