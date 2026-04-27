@@ -15,7 +15,7 @@ search:
 - Different clusters have different hardware and softwares. So, if you have access to multiple clusters, you must install your R packages separately for each cluster.
 - Each cluster has multiple versions of R and packages installed with one version of R may not work with another version of R. So, libraries for each R version must be installed in a separate directory.
 - You can define the directory where your R packages will be installed using the environment variable ```R_LIBS_USER```.
-- For your convenience, a sample [~/.Rprofile example file :octicons-link-external-16:](https://rcac.purdue.edu/files/knowledge/run/examples/apps/r/Rprofile_example) is provided that can be downloaded to your cluster account and renamed into ```~/.Rprofile``` (or appended to one) to customize your installation preferences. [Detailed instructions here](example_r_profile_setup.md).
+- For your convenience, a sample [~/.Rprofile example file](https://rcac.purdue.edu/files/knowledge/run/examples/apps/r/Rprofile_example) is provided that can be downloaded to your cluster account and renamed into ```~/.Rprofile``` (or appended to one) to customize your installation preferences. [Detailed instructions here](example_r_profile_setup.md).
 
 ## Installing Packages
 - ### Step 0: Setup Installation Preferences
@@ -45,7 +45,7 @@ module load geos
 ```
 
 - ### Step 3: Install the package
-Now install the desired package using the command ```install.packages('package_name')```. R will automatically download the package and all its dependencies from [CRAN :octicons-link-external-16:](https://cran.r-project.org/mirrors.html) and install each one. Your terminal will show the build progress and eventually show whether the package was installed successfully or not.
+Now install the desired package using the command ```install.packages('package_name')```. R will automatically download the package and all its dependencies from [CRAN](https://cran.r-project.org/mirrors.html) and install each one. Your terminal will show the build progress and eventually show whether the package was installed successfully or not.
 
 ```r
 R
@@ -105,7 +105,7 @@ Attaching package: 'dplyr'
 
 For more information about installing R packages:
 
-- [Installing additional R packages on Linux :octicons-link-external-16:](http://cran.r-project.org/doc/manuals/r-release/R-admin.html#Installing-packages)
-- [List of Packages :octicons-link-external-16:](https://cran.r-project.org/web/packages/)
+- [Installing additional R packages on Linux](http://cran.r-project.org/doc/manuals/r-release/R-admin.html#Installing-packages)
+- [List of Packages](https://cran.r-project.org/web/packages/)
 
 [**Back to the R Examples section**](../r_example.md)
