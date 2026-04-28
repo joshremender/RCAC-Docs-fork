@@ -1,6 +1,6 @@
 # fast.ai
 
-[Back to ai datasets](../ai.md)
+[Back to AI datasets](../ai.md)
 
 | Field | Value |
 |--------|-------|

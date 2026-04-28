@@ -1,6 +1,6 @@
 # PhysicalAI-Robotics-Manipulation-SingleArm
 
-[Back to ai datasets](../ai.md)
+[Back to AI datasets](../ai.md)
 
 | Field | Value |
 |--------|-------|
