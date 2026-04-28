@@ -32,7 +32,7 @@ $ module avail datasets/<category>
     - **Anvil:** `/anvil/datasets`
     - **Community clusters** (Gilbreth, Negishi, Bell, Gautschi, and others): `/depot/datasets`
 
-    Both paths are open to the clusters' users to read for public datasets.
+    These paths are accessible to all cluster users with read-only permissions.
 
 !!! tip "Use the `DATASETS_DIR` environment variable"
     After running `module load datasets`, the base dataset path is automatically stored in the `DATASETS_DIR` environment variable for convenient access in your shell, jobs, and workflows.
