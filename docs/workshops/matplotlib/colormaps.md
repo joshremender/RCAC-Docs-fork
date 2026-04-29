@@ -1,3 +1,15 @@
+---
+tags:
+  - Workshop
+  - Visualization
+  - Python
+  - MatPlotLib
+authors:
+  - carls113
+search:
+  boost: 1
+---
+
 # Colormaps
 [Back to main index](index.md){ .md-button }
 
