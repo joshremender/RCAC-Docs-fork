@@ -34,7 +34,7 @@
       "bibtex": "@article{Bey2001,\\n  author  = {Bey, I. and Jacob, D. J. and Yantosca, R. M. and Logan, J. A. and Field, B. D. and Fiore, A. M. and Li, Q. and Liu, H. Y. and Mickley, L. J. and Schultz, M. G.},\\n  title   = {Global modeling of tropospheric chemistry with assimilated meteorology: Model description and evaluation},\\n  journal = {Journal of Geophysical Research: Atmospheres},\\n  volume  = {106},\\n  number  = {D19},\\n  pages   = {23073--23095},\\n  year    = {2001},\\n  doi     = {10.1029/2001JD000807},\\n  url     = {https://doi.org/10.1029/2001JD000807}\\n}",
       "cite": "Bey, I., Jacob, D. J., Yantosca, R. M., Logan, J. A., Field, B. D., Fiore, A. M., Li, Q., Liu, H. Y., Mickley, L. J., & Schultz, M. G. (2001). Global modeling of tropospheric chemistry with assimilated meteorology: Model description and evaluation. Journal of Geophysical Research: Atmospheres, 106(D19), 23073-23095. https://doi.org/10.1029/2001JD000807",
       "file_number": "797179",
-      "title": "GEOS-Chem Input Data",
+      "title": "GEOS-Chem",
       "link": "https://geos-chem.readthedocs.io",
       "doi": "10.1029/2001JD000807",
       "publication_date": "2001",

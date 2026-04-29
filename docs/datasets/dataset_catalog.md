@@ -71,7 +71,7 @@ As of **April 29, 2026**, there are **59** publicly available datasets across **
       <td>climateModel, Earth System, Global Climate</td>
     </tr>
     <tr>
-      <td><a href="../climateModel/GEOS-Chem"><strong>GEOS-Chem Input Data</strong></a></td>
+      <td><a href="../climateModel/GEOS-Chem"><strong>GEOS-Chem</strong></a></td>
       <td>Climate Model</td>
       <td>climateModel, Atmospheric Chemistry, Chemical Transport Model</td>
     </tr>
