@@ -14,7 +14,7 @@ Choose your preferred access method based on your workflow needs.
 
 !!! tip "Which option should I choose?"
     - **Use POSIX** if you are running training jobs on RCAC clusters and need maximum I/O performance with compressed formats.
-    - **Use S3** if you need to browse or download individual files, access data from outside RCAC, or stream data without downloading entire archives.
+    - **Use S3** if you need to browse or download individual files, or stream data without downloading entire archives.
 
 
 === "POSIX File System (Compressed Formats)"
