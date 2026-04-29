@@ -23,9 +23,10 @@ Choose your preferred access method based on your workflow needs.
     **Quick Start:**
     
     ```bash
+    $ module avail
     $ module load datasets
-    $ module avail datasets/ai
-    $ module load datasets/ai/<dataset-name>
+    $ module avail ai
+    $ module load ai/<dataset-name>
     ```
     
     ## Working with Datasets

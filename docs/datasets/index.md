@@ -5,11 +5,16 @@ Browse public datasets available on Purdue RCAC clusters. This page links to the
 ## Browse Dataset Categories
 
 - [AI Datasets](ai.md)
-- [Hydrological Datasets](hydrological.md)
-- [Meteorological Datasets](meteorological.md)
-- [Geospatial Datasets](geospatial.md)
+- [Climate Model Datasets](climateModel.md)
 - [Covariates Datasets](Covariates.md)
 - [GeoAI Datasets](geoai.md)
+- [Geospatial Datasets](geospatial.md)
+- [Hydrological Datasets](hydrological.md)
+- [Meteorological Datasets](meteorological.md)
+
+## Complete Dataset Catalog
+
+For a filterable table of all datasets, see the [Complete Dataset Catalog](dataset_catalog.md).
 
 ## Getting Started
 
@@ -23,7 +28,7 @@ $ module load datasets
 After loading the module, you can check the datasets available in a specific category such as `ai`, `hydrological`, or `meteorological`:
 
 ```bash
-$ module avail datasets/<category>
+$ module avail <category>
 ```
 
 !!! note "Dataset locations"
