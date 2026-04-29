@@ -5,8 +5,9 @@
 AI datasets in this collection cover computer vision, physicalAI, and robotics. They support tasks such as detection, segmentation, tracking, control, reinforcement learning, and large-scale model pretraining and evaluation across domains including everyday objects, smart spaces, and embodied PhysicalAI.
 
 This page provides access to curated AI datasets available on RCAC clusters through two storage options: 
-  - compressed formats on the POSIX file system, and 
-  - raw/extracted data on S3-compatible object storage.
+
+- compressed formats on the POSIX file system, and 
+- raw/extracted data on S3-compatible object storage.
 
 ## Accessing AI Datasets
 
