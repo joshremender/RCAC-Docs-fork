@@ -1,6 +1,5 @@
 ---
 tags:
-  - Workshop
   - Visualization
   - Python
   - MatPlotLib
